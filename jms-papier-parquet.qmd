@@ -1,0 +1,44 @@
+---
+title: "Le format Parquet pour la diffusion de données : un choix technique au service des utilisateurs"
+authors:
+  - name: Cédric Bobinec
+    affiliation: Insee, Pôle ODL
+    email: <cedric.bobinec@insee.fr>
+  - name: Lino Galiana
+    affiliation: Insee, Direction des statistiques démographiques et sociales
+    email: <lino.galiana@insee.fr>
+keywords: # 6 maximum
+  - open data
+  - open source
+  - diffusion de données
+domains: # utiliser la nomenclature du site (menu déroulant) 
+  - Communication, open science
+  - Open data, documentation, métadonnées, mise à disposition
+resume: |
+    La diffusion et l'exploitation de microdonnées se heurte souvent à des freins techniques liés au volume des fichiers et à la complexité de leur exploitation. Le format \texttt{Parquet}, issu à l'origine de l’écosystème big data mais s'étant diffusé bien au-delà de cette sphère, s’impose comme une alternative efficace aux formats traditionnels comme le CSV. 
+
+    Le format Parquet présente, pour les statisticiens et data scientists, des propriétés idéales. Il s'agit d'un format \textit{open source}, associé à un écosystème dynamique principalement articulé autour des projets Arrow et DuckDB. Par rapport au \texttt{CSV}, le format \texttt{Parquet} permet d'obtenir des fichiers légers, rapides à lire et avec des métadonnées permettant aux producteurs de données de mieux guider les réutilisateurs de données. Ce format est bien intégré dans les principaux langages de traitement de données (\texttt{R}, \texttt{Python}, \texttt{Javascript}) ce qui facilite, dans les faits, l’exploitation de données sans nécessiter d’outils propriétaires ou de ressources machines importantes.
+
+    Cette présentation reviendra sur les expériences de diffusion de données au format Parquet par l'Insee à partir des exemples des données anonymisées du recensement de la population ou la base des équipements publics. Ce choix technique, associé à un accompagnement des utilisateurs (guides, exemples de code), a permis d'accroître l'usage de ces sources qui étaient, auparavant, complexes à valoriser.  Cette communication évoquera également les implications pratiques de ce choix technique, les bonnes pratiques à mettre en oeuvre lors de l'adoption de ce format de données et les opportunités d'innovation permises par ce format.
+abstract: |
+    (Texte en anglais de 5 à 10 lignes)\ 
+    `#lorem(30)`{=typst}
+bibliography: references.bib
+format:
+  jms2025-typst:
+    logo:
+      location: center-top # ne pas modifier
+      width: 160mm # ne pas modifier
+    mainfont: "tex gyre heros" # peut être modifié pour "calibri" sous windows, voir le script install-fonts.sh
+    footer: 15^e^ édition des journées de méthodologie statistique de l'Insee (JMS 2025) # ne pas modifier
+    section-numbering: 1.1.1.
+    keep-typ: true
+---
+
+Parmi les nombreuses innovations techniques ayant émergé depuis les années 2010 dans l'écosystème de la donnée, le format `Parquet` fait parti de celles ayant connues une adoption large parmi les _data scientists_ et statisticiens. Initialement conçu pour répondre à aux besoins des plateformes _big data_ comme [Hadoop](https://fr.wikipedia.org/wiki/Hadoop) - réduction du volume de stockage et du temps de lecture des données - celui-ci s'est diffusé au-delà de cette sphère et a même survécu à la plupart des technologies _big data_ qui sont, depuis, tombées en désuétude [@tigani2023big].  
+
+La diffusion et l'exploitation de microdonnées se heurte souvent à des freins techniques liés au volume des fichiers et à la complexité de leur exploitation. Le format \texttt{Parquet}, issu à l'origine de l’écosystème big data mais s'étant diffusé bien au-delà de cette sphère, s’impose comme une alternative efficace aux formats traditionnels comme le CSV. 
+
+Le format Parquet présente, pour les statisticiens et data scientists, des propriétés idéales. Il s'agit d'un format \textit{open source}, associé à un écosystème dynamique principalement articulé autour des projets Arrow et DuckDB. Par rapport au \texttt{CSV}, le format \texttt{Parquet} permet d'obtenir des fichiers légers, rapides à lire et avec des métadonnées permettant aux producteurs de données de mieux guider les réutilisateurs de données. Ce format est bien intégré dans les principaux langages de traitement de données (\texttt{R}, \texttt{Python}, \texttt{Javascript}) ce qui facilite, dans les faits, l’exploitation de données sans nécessiter d’outils propriétaires ou de ressources machines importantes.
+
+Cette présentation reviendra sur les expériences de diffusion de données au format Parquet par l'Insee à partir des exemples des données anonymisées du recensement de la population ou la base des équipements publics. Ce choix technique, associé à un accompagnement des utilisateurs (guides, exemples de code), a permis d'accroître l'usage de ces sources qui étaient, auparavant, complexes à valoriser.  Cette communication évoquera également les implications pratiques de ce choix technique, les bonnes pratiques à mettre en oeuvre lors de l'adoption de ce format de données et les opportunités d'innovation permises par ce format.

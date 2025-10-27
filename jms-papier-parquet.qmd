@@ -45,10 +45,32 @@ Nous reviendrons d'abord sur les propriétés techniques intéressantes de ce fo
 Nous présenterons d’abord les propriétés techniques du format `Parquet` qui expliquent sa popularité, bien qu'elles ne soient pas propres aux problématiques de diffusion de données (@sec-1). Nous aborderons ensuite les outils et bibliothèques à l'état de l’art permettant de consommer efficacement ce type de fichiers, faisant du `Parquet` un format particulièrement adapté à la diffusion de données (@sec-2).  
 Nous reviendrons sur les retours d'expérience liés à la diffusion de données publiques en `Parquet` et proposerons quelques bonnes pratiques pour leur mise à disposition et l'accompagnement des utilisateurs (@sec-3). Enfin, nous évoquerons les perspectives qu'ouvre une adoption plus large de ce format, notamment pour la mise en place de _datavisualisations_ automatiques ou l'adoption de plateformes de données à destination des praticiens (@sec-4).
 
+# Retour sur les proriétés techniques du format `Parquet`
 
-# Les proriétés techniques du format `Parquet`
+## Les deux approches : le fichier ou la base de données
 
-## Fichier ou base de données
+Dans le domaine du stockage et de la mise à disposition de données, deux logiques dominent : la base de données ou le fichier. Ces deux logiques diffèrent fortement dans la manière dont l'information est organisée, accessible et modifiable par un client qui la consomme. 
+
+Une base de données relationnelle est une manière de procéder selon une logique systémique. L'accès à la donné (en lecture comme en écriture) est gérée par un système de gestion de base de données (SGBD) qui permet :
+
+- de stocker des ensembles cohérents de données,
+- d'en permettre la mise à jour (ajout, suppression, modification),
+- d'en contrôler l'accès (droits utilisateurs, types de requêtes, etc.).
+
+Dans ces systèmes, les données sont organisées en tables reliées par des relations, souvent selon un schéma en étoile. Par exemple, une table longitudinale de données individuelles est reliée d'un côté à une table d'identifiants ménage uniques et de l'autre à une table d'identifiants entreprise unique. Le logiciel associé à la base de données fait ensuite le lien entre ces tables, souvent par le biais de requêtes `SQL`. L'un des logiciels les plus efficaces dans ce domaine est [`PostgreSQL`](https://www.postgresql.org/).
+
+La deuxième approche est celle du fichier qui consiste à organiser l'information dans un document stocké de manière autonome sur un système de fichiers. Contrairement à la base de données, le fichier ne repose pas sur un moteur logiciel chargé d’en gérer les accès ou la cohérence : il contient directement la donnée, dans un format plus ou moins structuré selon les besoins.
+
+Cette approche favorise la simplicité et la portabilité. Les fichiers peuvent être partagés, copiés ou archivés sans dépendre d’une infrastructure spécifique.
+Ils ne nécessitent pas l'installation ou le maintien d’un logiciel de gestion spécialisé : un simple _file system_, déjà présent sur tout système d’exploitation, suffit à y accéder. Leur lecture ne nécessite qu'un outil adapté au format utilisé. 
+
+Le succès croissant des fichiers dans l’écosystème de la data science s’explique par plusieurs facteurs techniques et pratiques qui les rendent particulièrement adaptés aux usages analytiques modernes.
+
+En premier lieu, les fichiers sont beaucoup plus légers à manipuler que les bases de données. Ils ne nécessitent pas l'installation ou le maintien d’un logiciel de gestion spécialisé : un simple _file system_, déjà présent sur tout système d’exploitation, suffit à y accéder. En ce qui concerne la lecture, il s'agit d'avoir un outil adapté au format utilisé. Ceci rend l'approche par les fichiers particulièrement souple et explique le succès de formats plats comme le `CSV` (lisible par n'importe quel éditeur de texte), `JSON` (lisible par n'importe quel navigateur web) ou, plus récemment, le format `Parquet`.
+
+
+La principale raison pour laquelle les fichiers sont souvent privilégiés par rapport aux SGBD réside dans la nature des opérations effectuées. Les bases de données relationnelles prennent tout leur sens lorsque l'on doit gérer des écritures fréquentes ou des mises à jour complexes sur des ensembles de données structurés — c’est-à-dire dans une logique applicative, où la donnée évolue continuellement (ajout, modification, suppression). À l'inverse, dans un contexte analytique, on se contente généralement de lire et de manipuler temporairement des données sans modifier la source. L'objectif est d’interroger, d’agréger, de filtrer — pas de pérenniser les changements. Pour ce type d’usage, les fichiers (notamment dans des formats optimisés comme `Parquet`, comme nous allons le voir) sont parfaitement adaptés : ils offrent une lecture rapide, une portabilité élevée et n'imposent pas l'intermédiation d’un moteur de base de données.
+
 
 ## 
 

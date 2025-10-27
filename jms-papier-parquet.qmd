@@ -35,10 +35,31 @@ format:
     keep-typ: true
 ---
 
-Parmi les nombreuses innovations techniques ayant émergé depuis les années 2010 dans l'écosystème de la donnée, le format `Parquet` fait parti de celles ayant connues une adoption large parmi les _data scientists_ et statisticiens. Initialement conçu pour répondre à aux besoins des plateformes _big data_ comme [Hadoop](https://fr.wikipedia.org/wiki/Hadoop) - réduction du volume de stockage et du temps de lecture des données - celui-ci s'est diffusé au-delà de cette sphère et a même survécu à la plupart des technologies _big data_ qui sont, depuis, tombées en désuétude [@tigani2023big].  
+Parmi les nombreuses innovations techniques ayant émergé depuis les années 2010 dans l'écosystème de la donnée, le format `Parquet` fait parti de celles ayant connues une adoption large parmi les _data scientists_ et statisticiens. Initialement conçu pour répondre à aux besoins des plateformes _big data_ comme [Hadoop](https://fr.wikipedia.org/wiki/Hadoop) - réduction du volume de stockage et du temps de lecture des données - celui-ci s'est diffusé au-delà de cette sphère et a même survécu à la plupart des technologies _big data_ qui sont, depuis, tombées en désuétude [@tigani2023big].
 
-La diffusion et l'exploitation de microdonnées se heurte souvent à des freins techniques liés au volume des fichiers et à la complexité de leur exploitation. Le format \texttt{Parquet}, issu à l'origine de l’écosystème big data mais s'étant diffusé bien au-delà de cette sphère, s’impose comme une alternative efficace aux formats traditionnels comme le CSV. 
+Plusieurs acteurs majeurs de l'écosystème de l'intelligence artificielle, notamment [HuggingFace](https://huggingface.co/), ont fait de `Parquet` la pierre angulaire de leur système de stockage de données. Dans le domaine de la diffusion de données, où se rencontrent des publics aux attentes et compétences techniques diverses, l'adoption de ce format a été plus tardive. Si la plateforme communautaire `data.gouv` recense depuis plusieurs années des `Parquet` créés par des utilisateurs experts pour faciliter l'usage de certains jeux de données, la statistique publique ne s'est mise à diffuser, d'elle-même, que récemment des fichiers `Parquet`. Depuis la diffusion en 2023 par l'Insee des données détaillées du répertoire électoral unique (REU) puis du recensement de la population (RP) dans ce format de données, permettant de simplifier l'usage de ces sources de données volumineuses, de nombreuses sources de la statistique publique ont été publiées dans ce format.
 
-Le format Parquet présente, pour les statisticiens et data scientists, des propriétés idéales. Il s'agit d'un format \textit{open source}, associé à un écosystème dynamique principalement articulé autour des projets Arrow et DuckDB. Par rapport au \texttt{CSV}, le format \texttt{Parquet} permet d'obtenir des fichiers légers, rapides à lire et avec des métadonnées permettant aux producteurs de données de mieux guider les réutilisateurs de données. Ce format est bien intégré dans les principaux langages de traitement de données (\texttt{R}, \texttt{Python}, \texttt{Javascript}) ce qui facilite, dans les faits, l’exploitation de données sans nécessiter d’outils propriétaires ou de ressources machines importantes.
+Nous reviendrons d'abord sur les propriétés techniques intéressantes de ce format qui expliquent sa popularité, sans être spécifique aux problématiques de diffusion de données (@sec-1). Nous évoquerons ensuite la manière dont les librairies à l'état de l'art permettent de consommer de manière assez efficace ce type de fichier, ce qui en fait un fichier de diffusion intéressant (@sec-2). Nous reviendrons ensuite sur les expériences de diffusion au format `Parquet` et évoquerons quelques bonnes pratiques pour la diffusion de données et l'accompagnement des utilisateurs (@sec-3). Nous terminerons par les perspectives qu'ouvre l'adoption plus large de `Parquet` pour partager des données dans une perspective de _datavisualisations_ automatiques ou de plateformes de données à destination de praticiens (@sec-4). 
 
-Cette présentation reviendra sur les expériences de diffusion de données au format Parquet par l'Insee à partir des exemples des données anonymisées du recensement de la population ou la base des équipements publics. Ce choix technique, associé à un accompagnement des utilisateurs (guides, exemples de code), a permis d'accroître l'usage de ces sources qui étaient, auparavant, complexes à valoriser.  Cette communication évoquera également les implications pratiques de ce choix technique, les bonnes pratiques à mettre en oeuvre lors de l'adoption de ce format de données et les opportunités d'innovation permises par ce format.
+
+Nous présenterons d’abord les propriétés techniques du format `Parquet` qui expliquent sa popularité, bien qu'elles ne soient pas propres aux problématiques de diffusion de données (@sec-1). Nous aborderons ensuite les outils et bibliothèques à l'état de l’art permettant de consommer efficacement ce type de fichiers, faisant du `Parquet` un format particulièrement adapté à la diffusion de données (@sec-2).  
+Nous reviendrons sur les retours d'expérience liés à la diffusion de données publiques en `Parquet` et proposerons quelques bonnes pratiques pour leur mise à disposition et l'accompagnement des utilisateurs (@sec-3). Enfin, nous évoquerons les perspectives qu'ouvre une adoption plus large de ce format, notamment pour la mise en place de _datavisualisations_ automatiques ou l'adoption de plateformes de données à destination des praticiens (@sec-4).
+
+
+# Les proriétés techniques du format `Parquet`
+
+## Fichier ou base de données
+
+## 
+
+# Les librairies 
+
+# La diffusion du RP 
+
+## Retour sur la diffusion
+
+## Bonnes pratiques
+
+sorting
+
+# Perspectives

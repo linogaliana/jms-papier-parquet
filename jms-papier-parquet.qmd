@@ -16,6 +16,7 @@ domains: # utiliser la nomenclature du site (menu déroulant)
   - Open data, documentation, métadonnées, mise à disposition
 resume: |
     La diffusion et l'exploitation de microdonnées se heurte souvent à des freins techniques liés au volume des fichiers et à la complexité de leur exploitation. Le format \texttt{Parquet}, issu à l'origine de l’écosystème big data mais s'étant diffusé bien au-delà de cette sphère, s’impose comme une alternative efficace aux formats traditionnels comme le CSV. 
+ 
 
     Le format Parquet présente, pour les statisticiens et data scientists, des propriétés idéales. Il s'agit d'un format \textit{open source}, associé à un écosystème dynamique principalement articulé autour des projets Arrow et DuckDB. Par rapport au \texttt{CSV}, le format \texttt{Parquet} permet d'obtenir des fichiers légers, rapides à lire et avec des métadonnées permettant aux producteurs de données de mieux guider les réutilisateurs de données. Ce format est bien intégré dans les principaux langages de traitement de données (\texttt{R}, \texttt{Python}, \texttt{Javascript}) ce qui facilite, dans les faits, l’exploitation de données sans nécessiter d’outils propriétaires ou de ressources machines importantes.
 
@@ -35,7 +36,9 @@ format:
     keep-typ: true
 ---
 
-Parmi les nombreuses innovations techniques ayant émergé depuis les années 2010 dans l'écosystème de la donnée, le format `Parquet` fait parti de celles ayant connues une adoption large parmi les _data scientists_ et statisticiens. Initialement conçu pour répondre à aux besoins des plateformes _big data_ comme [Hadoop](https://fr.wikipedia.org/wiki/Hadoop) - réduction du volume de stockage et du temps de lecture des données - celui-ci s'est diffusé au-delà de cette sphère et a même survécu à la plupart des technologies _big data_ qui sont, depuis, tombées en désuétude [@tigani2023big].
+
+
+Parmi les nombreuses innovations techniques ayant émergé depuis les années 2010 dans l'écosystème de la donnée, le format `Parquet` fait parti de celles ayant connues une adoption large parmi les _data scientists_ et statisticiens. Initialement conçu pour répondre à aux besoins des plateformes _big data_ comme [Hadoop](https://fr.wikipedia.org/wiki/Hadoop) - réduction du volume de stockage et du temps de lecture des données - celui-ci s'est diffusé au-delà de cette sphère et a même survécu à la plupart des technologies _big data_ qui sont, depuis, tombées en désuétude [@Tigani_2023].
 
 Plusieurs acteurs majeurs de l'écosystème de l'intelligence artificielle, notamment [HuggingFace](https://huggingface.co/), ont fait de `Parquet` la pierre angulaire de leur système de stockage de données. Dans le domaine de la diffusion de données, où se rencontrent des publics aux attentes et compétences techniques diverses, l'adoption de ce format a été plus tardive. Si la plateforme communautaire `data.gouv` recense depuis plusieurs années des `Parquet` créés par des utilisateurs experts pour faciliter l'usage de certains jeux de données, la statistique publique ne s'est mise à diffuser, d'elle-même, que récemment des fichiers `Parquet`. Depuis la diffusion en 2023 par l'Insee des données détaillées du répertoire électoral unique (REU) puis du recensement de la population (RP) dans ce format de données, permettant de simplifier l'usage de ces sources de données volumineuses, de nombreuses sources de la statistique publique ont été publiées dans ce format.
 
@@ -46,6 +49,7 @@ Nous présenterons d’abord les propriétés techniques du format `Parquet` qui
 Nous reviendrons sur les retours d'expérience liés à la diffusion de données publiques en `Parquet` et proposerons quelques bonnes pratiques pour leur mise à disposition et l'accompagnement des utilisateurs (@sec-3). Enfin, nous évoquerons les perspectives qu'ouvre une adoption plus large de ce format, notamment pour la mise en place de _datavisualisations_ automatiques ou l'adoption de plateformes de données à destination des praticiens (@sec-4).
 
 # Retour sur les proriétés techniques du format `Parquet`
+
 
 ## Les deux approches : le fichier ou la base de données
 
@@ -69,19 +73,137 @@ Le succès croissant des fichiers dans l’écosystème de la data science s’e
 En premier lieu, les fichiers sont beaucoup plus légers à manipuler que les bases de données. Ils ne nécessitent pas l'installation ou le maintien d’un logiciel de gestion spécialisé : un simple _file system_, déjà présent sur tout système d’exploitation, suffit à y accéder. En ce qui concerne la lecture, il s'agit d'avoir un outil adapté au format utilisé. Ceci rend l'approche par les fichiers particulièrement souple et explique le succès de formats plats comme le `CSV` (lisible par n'importe quel éditeur de texte), `JSON` (lisible par n'importe quel navigateur web) ou, plus récemment, le format `Parquet`.
 
 
-La principale raison pour laquelle les fichiers sont souvent privilégiés par rapport aux SGBD réside dans la nature des opérations effectuées. Les bases de données relationnelles prennent tout leur sens lorsque l'on doit gérer des écritures fréquentes ou des mises à jour complexes sur des ensembles de données structurés — c’est-à-dire dans une logique applicative, où la donnée évolue continuellement (ajout, modification, suppression). À l'inverse, dans un contexte analytique, on se contente généralement de lire et de manipuler temporairement des données sans modifier la source. L'objectif est d’interroger, d’agréger, de filtrer — pas de pérenniser les changements. Pour ce type d’usage, les fichiers (notamment dans des formats optimisés comme `Parquet`, comme nous allons le voir) sont parfaitement adaptés : ils offrent une lecture rapide, une portabilité élevée et n'imposent pas l'intermédiation d’un moteur de base de données.
+La principale raison pour laquelle les fichiers sont souvent privilégiés par rapport aux SGBD réside dans la nature des opérations effectuées. Les bases de données relationnelles prennent tout leur sens lorsque l'on doit gérer des écritures fréquentes ou des mises à jour complexes sur des ensembles de données structurés[^acid], c'est-à-dire dans une logique applicative, où la donnée évolue continuellement (ajout, modification, suppression). À l'inverse, dans un contexte analytique, on se contente généralement de lire et de manipuler temporairement des données sans modifier la source. L'objectif est d’interroger, d’agréger, de filtrer pour une valorisation annexe - pas de pérenniser des changements sur une donnée brute. Pour ce type d’usage, les fichiers (notamment dans des formats optimisés comme `Parquet`, comme nous allons le voir) sont parfaitement adaptés : ils offrent une lecture rapide, une portabilité élevée et n'imposent pas l'intermédiation d’un moteur de base de données.
+
+[^acid]: Les bases de données ont une propriété dite ACID (Atomicité, Cohérence, Isolation et Durabilité) qui garantit que chaque transaction est exécutée entièrement ou pas du tout, qu’elle préserve l'intégrité des données, qu'elle ne perturbe pas les autres opérations simultanées et qu'elle reste enregistrée même en cas de défaillance du système.
 
 
-## 
+## Les limites du CSV
 
-# Les librairies 
+Si les fichiers sont plus simples d'usage pour les besoins analytiques que les  bases de données, tous les formats ne se valent pas. Un format est une manière de contraindre l'organisation de la donnée ce qui conditionnera ultérieurement les possibilités d'exploitation, de stockage et d'interopérabilité.
 
-# La diffusion du RP 
+L'interopérabilité, c'est-à-dire la capacité à ingérer la donnée sans imposer un logiciel, est une propriété désirable d'un fichier de donnée. Les formats propriétaires, par exemple le `.sas7bdat` ou le `.xlsx` peuvent, à cet égard, poser problème. Bien qu'il existe des librairies dans les logiciels statistiques _open source_ pour lire ce type de fichier, elles ne sont pas forcément optimisées et l'intégrité de la donnée n'est pas garantie. 
 
-## Retour sur la diffusion
+Les formats ouverts et documentés garantissent la possibilité pour tout utilisateur, quel que soit son environnement logiciel, de lire et de traiter les données sans dépendre d'un éditeur particulier. Du fait de sa simplicité, le format CSV s'est imposé comme un standard de partage de données. Son principal avantage est qu'il est à la fois lisible par un humain (un simple éditeur de texte permettant de l'ouvrir) et par des programmes informatiques (du fait de sa structure tabulaire). 
 
-## Bonnes pratiques
+Cependant, le CSV, bien qu’ouvert et universellement lisible, présente de nombreuses limites techniques. En premier lieu, le CSV n'est pas un format compressé donc les jeux de données peuvent devenir volumineux. Ce format n'embarque pas non plus de métadonnées pouvant guider la lecture du fichier, en particulier les types de variables. 
 
-sorting
+Ces limites expliquent l'émergence de formats plus modernes, capables de combiner ouverture, efficacité et richesse structurelle — au premier rang desquels le format Parquet.
+
+## Le format `Parquet`
+
+Sa principale caractéristique : il est **orienté colonne**. Contrairement au CSV, les données de chaque colonne sont stockées **séparément**. Cela permet :
+
+- de charger uniquement les colonnes utiles à une analyse ;
+- de compresser plus efficacement les données ;
+- d’accélérer significativement les requêtes sélectives.
+
+L'organisation en colonnes du format Parquet permet, à partir des métadonnées décrivant la taille et la structure des blocs (ou _row groups_), de sélectionner directement les colonnes utiles à l’analyse et d’ignorer les segments non pertinents. Cette indexation interne optimise la lecture sélective et limite les accès disque.
+
+![Organisation de la donnée dans différents formats](https://ensae-reproductibilite.github.io/website/columnar-storage.png{#fig-parquet}
+
+Une autre propriété importante du format `Parquet` est sa capacité native à produire des fichiers partitionnés, c'est à dire à distribuer un fichier de données selon une ou plusieurs clés de partitionnement. Dans la majorité des cas, les traitements statistiques ne concernent pas l'ensemble des données d'une source de données : on voudra souvent restreindre les calculs à une zone géographique, une fenêtre temporelle, etc. Si les données à traiter sont disponibles sous la forme d'un unique fichier, il faudra généralement charger l'ensemble des données en mémoire — a minima, les colonnes pertinentes — pour réaliser les traitements. A contrario, `Parquet` offre la possibilité native de partitionner un jeu de données selon une variable de filtrage fréquente — à la manière d'un index dans une base `SQL` — ce qui permet d'optimiser les traitements et d'accroître encore leur efficience (@fig-parquet-partitions). Là encore, cette propriété rend le format `Parquet` particulièrement pertinent pour les traitements analytiques qui caractérisent les applications de *data science* [@dondon2023quels].
+
+![Représentation sur le *filesystem* d'un fichier `Parquet` partitionné selon deux clés : l'année et le mois. Dans cet exemple, effectuer une requête faisant intervenir seulement un ou quelques mois de données serait très efficient dans la mesure où seules les partitions pertinentes auront besoin d'être chargées en mémoire.](https://ensae-reproductibilite.github.io/website/parquet-partitions.png){#fig-parquet-partitions fig-align="center" height=300}
+
+Ces différentes propriétés techniques (compression, rapidité en lecture, typage...) font que le format `Parquet` n’est pas réservé aux architectures _big data_. Toute personne prête à utiliser un langage de programmation statistique utilisant des jeux de données poura bénéficier de ses qualités. Dans le domaine de la diffusion, cela signifie 
+
+
+## Les librairies 
+
+Il existe de nombreuses librairies accessibles depuis les langages statistiques `R` et `Python` fonctionnant bien avec `Parquet`. Les deux plus utiles à connaître sont `Arrow` et `DuckDB`. Ces deux librairies 
+
+Le format `Parquet` rend le stockage de données au format tabulaire beaucoup plus efficient. Mais pour pleinement bénéficier de cette structure de données, il est également nécessaire de s'intéresser à l'étape suivante : le traitement des données en mémoire.
+
+Deux outils majeurs ont émergé à cette fin au cours des dernières années. Le premier est [Apache Arrow](https://arrow.apache.org/), un format tabulaire de données en mémoire interopérable entre de nombreux langages (`Python`, `R`, `Java`, etc.). Le second est [`DuckDB`](https://duckdb.org/), un système de base de données portable et interopérable permettant de requêter des sources de données de nature très variée (@fig-duckdb-multisrc). Ces deux outils, bien que techniquement très différents en termes d'implémentation, présentent des avantages et des gains de performance semblables. D'abord, ils sont tous deux orientés-colonne et travaillent ainsi en synergie avec le format `Parquet`, dans la mesure où ils font persister les bénéfices de ce format de stockage dans la mémoire (@fig-arrow-memory).
+
+![Représentation en mémoire des données au format `Arrow`. Avec ce format, le stockage en mémoire est également orienté-colonne. Cela permet d'une part de faire perdurer en mémoire les avantages du format `Parquet` pour le stockage, et d'autre part d'exploiter les avancées des processeurs récents en matière de vectorisation des opérations. Dans cet exemple, la représentation en colonne des données dans la mémoire permet à la requête de filtrage sur les données de la colonne `session_id` d'être beaucoup plus efficiente que dans un format en mémoire traditionnel.](https://ensae-reproductibilite.github.io/website/arrow-memory.png){#fig-arrow-memory fig-align="center" height=400}
+
+Par ailleurs, `Arrow` comme `DuckDB` permettent tous deux d'augmenter considérablement les performances des requêtes sur les données grâce à l'utilisation de la *lazy evaluation* ("évaluation paresseuse"). Là où les opérations sur des données sont généralement exécutées de manière linéaire par les langages de programmation — par exemple, sélectionner des colonnes et/ou filtrer des lignes, puis calculer de nouvelles colonnes, puis effectuer des agrégations, etc. — `Arrow` et `DuckDB` exécutent quant à eux ces dernières selon un plan d'exécution pré-calculé qui optimise de manière globale la chaîne de traitements. Dans ce paradigme, les calculs sont non seulement beaucoup plus performants, mais également beaucoup plus efficients dans la mesure où ils n'impliquent de récupérer que les données effectivement nécessaires pour les traitements demandés. Ces innovations permettent ainsi d'envisager des traitements basés sur des données dont le volume total dépasse la mémoire RAM effectivement disponible sur une machine.
+
+![Un avantage majeur de `DuckDB` est sa capacité à requêter de manière standardisée des sources de données très variées. DuckDB étant un format de base de données en mémoire, il est naturellement très adapté au requêtage de bases de données relationnelles (comme PostgreSQL ou MySQL). Mais ce *framework* peut également requêter de la même manière des fichiers de données (`CSV`, `Parquet`, etc.), qu'ils soient locaux ou stockés dans le *cloud*.](https://ensae-reproductibilite.github.io/website/duckdb-multisrc.png){#fig-duckdb-multisrc fig-align="center" height=400}
+
+La meilleure manière de se convaincre de l'apport du format `Parquet` consiste à tester celui-ci et à la comparer avec la même donnée enregistrée sous la forme d'un CSV, à la manière de la @fig-tableau-parquet. Les applications proposées ci-dessous proposent d'illustrer les concepts évoqués précédemment (_lazy evaluation_, partionnemement, etc.) et les deux écosystèmes mentionnés (`Arrow` et `DuckDB`) à partir d'exemples simples, montrant la simplicité d'usage de ceux-ci lorsqu'on est familier du traitement de données. L'[application fil rouge](/chapters/application.qmd) est plus succincte sur la partie `Parquet`.
+
+# La diffusion de données au format Parquet
+
+Les premières expérimentations de diffusion de données au format `Parquet` représentaient des cas d'usage idéaux pour tester la réception de ce format par les utilisateurs. Le fichier de diffusion des données détaillées du recensement de la population représente, par exemple, environ 20 millions d'observations pour 80 variables. Ce fichier est à destination d'utilisateurs experts qui désirent construire des statistiques à façon à partir de croisements qui n'existent pas dans les données agrégées. 
+
+Ce fichier était historiquement diffusé aux formats `dBase` (un SGBD dont les origines remontent aux années 1980) et ``CSV`. Un millésime représentait, au format CSV, approche des 5Go sur disque. Il nécessitait donc des ressources mémoire conséquentes pour être lu dans un logiciel statistique comme `R` et `Python` puisque ce format ne permet pas une lecture parcimonieuse du fichier. 
+
+La comparaison des performances en lecture de ces données au format CSV et Parquet est sans appel[^reproductibilite]. La mise à disposition d'un fichier n'oblige plus l'utilisateur à faire preuve d'ingéniosité pour découper son fichier de sorte à pouvoir le lire par bloc: cette propriété native du fichier `Parquet` permet aux utilisateurs de se concentrer sur l'exploitation des données. Pour aider les utilisateurs à s'approprier ce format, un guide, publié sur le blog du [SSPHub (ssphub.netlify.app/)](https://ssphub.netlify.app/), a accompagné la diffusion. 
+
+![Exemple de comparaison des performances du format `Parquet` dans plusieurs cas d'usage sur les données détaillées du recensement de la population diffusées par l'Insee en 2023](https://inseefrlab.github.io/formation-bonnes-pratiques-git-R/slides/img/tableau-perf-parquet.png){#fig-tableau-parquet width="80%"}
+
+[^reproductibilite]: Ce tableau est produit dans le cadre de la formation aux bonnes pratiques `R` et `Git` développée par l'Insee et faisant la promotion du format `Parquet` pour le stockage de données. Pour reproduire celui-ci, se rendre sur [inseefrlab.github.io/formation-bonnes-pratiques-git-R/slides/complete.html](https://inseefrlab.github.io/formation-bonnes-pratiques-git-R/slides/complete.html). 
+
+
+Outre une utilisation efficace des ressources, la diffusion dans ce format appporte aussi du confort aux utilisateurs, notamment grâce à l'usage de `DuckDB`. Cette librairie, simple d'usage depuis `R` ou `Python` permet de lire ce fichier simplement. Prenons pour exemple un besoin précis: dénombrer les logements niçois dont les occupants ont emmenagé depuis 2020. En `Python`, cela se traduit par la requête SQL:
+
+```python
+import duckdb
+
+url = "https://www.data.gouv.fr/api/1/datasets/r/fdf5b008-054b-4065-a819-3eb3313f8be7"
+duckdb.sql(
+  f"FROM read_parquet(\"{url}\") "
+  "SELECT COUNT(*) "
+  "WHERE COMMUNE = '06088' and CAST(AEMM AS int) > 2020 "
+)
+```
+
+En `R`, il est possible d'écrire un code très proche quoiqu'un peu plus verbeux. 
+
+```r
+url <- "https://www.data.gouv.fr/api/1/datasets/r/fdf5b008-054b-4065-a819-3eb3313f8be7"
+
+con <- DBI::dbConnect(duckdb::duckdb(), ":memory:")
+query <- glue::glue(
+  "FROM read_parquet(\"{url}\") ",
+  "SELECT COUNT(*) ",
+  "WHERE COMMUNE = '06088' and CAST(AEMM AS int) > 2020 "
+)
+dbGetQuery(con, query)
+```
+
+Il est néanmoins possible de directement utiliser la syntaxe très confortable de `dplyr` qui permet, par le biais du _package_ `dbplyr`, de déléguer les calculs au moteur d'exécution de `duckdb`
+
+```r
+library(dplyr)
+
+url <- "https://www.data.gouv.fr/api/1/datasets/r/fdf5b008-054b-4065-a819-3eb3313f8be7"
+con <- DBI::dbConnect(duckdb::duckdb(), ":memory:")
+df <- tbl(con, glue::glue("read_parquet(\"{url}\")"))
+df |>
+  filter(COMMUNE = '06088', AEMM > 2020) |>
+  tally() |>
+  collect()
+```
+
+Puisque les premières diffusions de `Parquet` en 2021 ont été appréciées par les utilisateurs des fichiers détails, ce format a été proposé dans la diffusion d'autres sources canonique de l'Insee. 
+
+
+```{python}
+import duckdb 
+from great_tables import *
+
+tab = duckdb.sql("""
+FROM read_csv_auto('/home/onyxia/work/jms-papier-parquet/consult_data_gouv_parquet.csv')
+SELECT title, metrics_resources_downloads
+WHERE organization_name='Institut national de la statistique et des études économiques (Insee)'
+ORDER BY metrics_resources_downloads DESC
+""").to_df()
+GT(tab)
+```
 
 # Perspectives
+
+Si ces premières expériences de diffusion de données aux formats `Parquet` ont permis d'illustrer l'apport de ce format pour les _data scientists_, statisticiens et géomaticiens utilisant des données détaillées, ce n'est pas la seule communauté pouvant bénéficier de ce format. Les spécialistes de _data visualisation_, une communauté plus proche du développement web, utilisant plutôt le langage `Javascript` peuvent également bénéficier de ce format. Grâce au portage de `DuckDB` en _Web Assembly_, il est possible de construire des _data visualisations_ réactives qui consomment des blocs de données, définis à partir d'une interface de sélection, d'un fichier `Parquet` plus large. Si ce dernier est bien organisé, par exemple avec des données ordonnées pour les sélecteurs mis dans l'interface, et des serveurs adéquats (qui autorisent les range requrst) il est possible d'avoir une consommation très efficace d'un fichier large. 
+
+Si Parquet n'a pas vocation à être le seul format de diffusion du fait de la nature du public utilisateur du site insee.fr et de ses besoins majoritaires (des données plus ou moins agrégées prêtes à l'emploi, pas forcément lues depuis un logiicel statistique), on peut néanmoins considérer que dans de nombreux cas d'usage analytique de la donnée, celui-ci pourrait servir comme mode d'accès aux données alternatif aux API. 
+
+
+
+
+
+
+

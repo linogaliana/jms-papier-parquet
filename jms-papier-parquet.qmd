@@ -36,6 +36,7 @@ format:
     keep-typ: true
 ---
 
+
 # Introduction
 
 Parmi les nombreuses innovations techniques ayant émergé au cours des années 2010 dans l'écosystème de la donnée, le format `Parquet` fait parti de celles ayant connues une adoption large parmi les _data scientists_ et statisticiens. Initialement conçu pour répondre à aux besoins des plateformes _big data_ comme [Hadoop](https://fr.wikipedia.org/wiki/Hadoop) - réduction du volume de stockage et du temps de lecture des données - celui-ci s'est diffusé au-delà de cette sphère et a même survécu à la plupart des technologies _big data_ qui sont, depuis, tombées en désuétude [@Tigani_2023].
@@ -122,104 +123,126 @@ Deux outils majeurs ont émergé à cette fin au cours des dernières années. L
 
 ![Représentation en mémoire des données au format `Arrow` (empruntée à @mise_en_prod)](https://ensae-reproductibilite.github.io/website/arrow-memory.png){#fig-arrow-memory fig-align="center" height=400}
 
-Ces deux librairies, comme l'illustre la @fig-arrow-memory,  font perdurer en mémoire les avantages du format `Parquet` pour le stockage, et permettent d'exploiter les avancées des processeurs récents en matière de vectorisation des opérations. Dans cet exemple, la représentation en colonne des données dans la mémoire permet à la requête de filtrage sur les données de la colonne `session_id` d'être beaucoup plus efficiente que dans un format en mémoire traditionnel. 
+Ces deux librairies, comme l'illustre la @fig-arrow-memory,  font perdurer en mémoire les avantages du format `Parquet` pour le stockage. Elles permettent également d'exploiter les avancées des processeurs récents en matière de vectorisation des opérations. Dans l'exemple de la @fig-arrow-memory, la représentation en colonne des données dans la mémoire permet à la requête de filtrage sur les données de la colonne `session_id` d'être beaucoup plus efficiente que dans un format en mémoire traditionnel. Cette approche optimisée permet d'ailleurs de lire des données de grande dimension, qui peuvent excéder largement la mémoire vive de l'ordinateur ou le serveur consommant la donnée [@muehleisen_2025_lost_decade_small_data].
 
-Par ailleurs, `Arrow` comme `DuckDB` permettent tous deux d'augmenter considérablement les performances des requêtes sur les données grâce à l'utilisation de la *lazy evaluation* ("évaluation paresseuse"). Là où les opérations sur des données sont généralement exécutées de manière linéaire par les langages de programmation — par exemple, sélectionner des colonnes et/ou filtrer des lignes, puis calculer de nouvelles colonnes, puis effectuer des agrégations, etc. — `Arrow` et `DuckDB` exécutent quant à eux ces dernières selon un plan d'exécution pré-calculé qui optimise de manière globale la chaîne de traitements. Dans ce paradigme, les calculs sont non seulement beaucoup plus performants, mais également beaucoup plus efficients dans la mesure où ils n'impliquent de récupérer que les données effectivement nécessaires pour les traitements demandés. Ces innovations permettent ainsi d'envisager des traitements basés sur des données dont le volume total dépasse la mémoire RAM effectivement disponible sur une machine.
+Par ailleurs, `Arrow` comme `DuckDB` permettent tous deux d'augmenter considérablement les performances des requêtes sur les données grâce à l'utilisation de la *lazy evaluation* ("évaluation paresseuse"). Là où les opérations sur des données sont généralement exécutées de manière linéaire par les langages de programmation - par exemple, sélectionner des colonnes et/ou filtrer des lignes, puis calculer de nouvelles colonnes, puis effectuer des agrégations, etc. - `Arrow` et `DuckDB` exécutent quant à eux ces dernières selon un plan d'exécution pré-calculé qui optimise de manière globale la chaîne de traitements. Dans ce paradigme, les calculs sont non seulement beaucoup plus performants, mais également beaucoup plus efficients dans la mesure où ils n'impliquent de récupérer que les données effectivement nécessaires pour les traitements demandés. Ces innovations permettent ainsi d'envisager des traitements basés sur des données dont le volume total dépasse la mémoire RAM effectivement disponible sur une machine.
 
-Un avantage majeur de `DuckDB` est sa capacité à requêter de manière standardisée des sources de données très variées. `DuckDB` étant un format de base de données en mémoire, il est naturellement très adapté au requêtage de bases de données relationnelles (comme PostgreSQL ou MySQL). Mais ce *framework* peut également requêter de la même manière des fichiers de données (`CSV`, `Parquet`, etc.), qu'ils soient locaux ou stockés dans le *cloud*. Par exemple, imaginons qu'on s'intéresse au répertoire Sirene et qu'on n'ait besoin que des variables `siret`, `activitePrincipaleEtablissement` pour les établissements actifs (`etatAdministratifEtablissement`). Si les données sont en CSV en local et qu'on utilise `Python`, il suffit de faire
+Un avantage majeur de `DuckDB` est sa capacité à requêter de manière standardisée des sources de données très variées. `DuckDB` étant un format de base de données en mémoire, il est naturellement très adapté au requêtage de bases de données relationnelles (comme PostgreSQL ou MySQL). Mais ce *framework* peut également requêter de la même manière des fichiers de données (`CSV`, `Parquet`, etc.), qu'ils soient locaux ou stockés dans le *cloud*. Ceci peut être illustré avec quelques exemples progressifs. 
 
-```python
-import duckdb
-df = duckdb.sql("""
+Imaginons qu'on s'intéresse au répertoire Sirene et qu'on n'ait besoin que des variables `siret`, `activitePrincipaleEtablissement` et qu'on ne souhaite conserver que les établissements actifs (`etatAdministratifEtablissement` a la modalité `A`). 
+
+Si les données sont stockées au format CSV en local et qu'on utilise `DuckDB` via `Python`, il suffit de faire:
+
+```{=typst} 
+#titled-raw-block(filename: "Importer un CSV avec DuckDB et Python", 
+  raw(lang: "Python", "import duckdb
+df = duckdb.sql(\"\"\"
   FROM read_csv_auto('chemin_local/stock.csv')
   SELECT siret, activitePrincipaleEtablissement
   WHERE etatAdministratifEtablissement == 'A'
-"""
+\"\"\"
 ).to_df()
+")
+)
 ```
 
 Si on bascule sur un format `Parquet`, le code est presque inchangé:
 
-```python
-import duckdb
-df = duckdb.sql("""
+```{=typst} 
+#titled-raw-block(filename: "Importer un Parquet avec DuckDB et Python", 
+  raw(lang: "Python", "import duckdb
+df = duckdb.sql(\"\"\"
   FROM read_parquet('chemin_local/stock.parquet')
   SELECT siret, activitePrincipaleEtablissement
   WHERE etatAdministratifEtablissement == 'A'
-"""
+\"\"\"
 ).to_df()
+")
+)
 ```
 
-Maintenant, si le fichier se trouve en ligne, par exemple sur la plateforme _data.gouv_, le code de lecture est inchangé, il est seulement nécessaire d'ajouter l'extension `httpfs` pour pouvoir lire des données non stockées en local
+Maintenant, si le fichier se trouve en ligne, par exemple sur la plateforme _data.gouv_, le code de lecture est presque inchangé. Il est seulement nécessaire d'ajouter l'extension `httpfs` pour pouvoir lire des données non stockées en local:
 
-```python
-import duckdb
+```{=typst} 
+#titled-raw-block(filename: "Importer un Parquet depuis internet avec DuckDB et Python", 
+  raw(lang: "Python", "import duckdb
 
+url = \"https://object.files.data.gouv.fr/data-pipeline-open/siren/stock/StockEtablissementHistorique_utf8.parquet\"
 con = duckdb.connect()
+con.sql(\"LOAD httpfs\")
 
-con.sql("LOAD httpfs")
-
-df = con.sql("""
-  FROM read_parquet('https://object.files.data.gouv.fr/data-pipeline-open/siren/stock/StockEtablissementHistorique_utf8.parquet')
+df = con.sql(f\"\"\"
+  FROM read_parquet('{url}')
   SELECT siret, activitePrincipaleEtablissement
   WHERE etatAdministratifEtablissement == 'A'
-"""
+\"\"\"
 ).to_df()
+")
+)
 ```
+
 
 Si finalement le fichier `Parquet` se trouve sur un système de stockage `S3`, par exemple sur le `SSPCloud`, le code change très peu, il suffit que le chemin de lecture commence par `s3://` après avoir créé un paramètre `s3_url_style` en amont:
 
-```python
-import duckdb
+```{=typst} 
+#titled-raw-block(filename: "Importer un Parquet depuis S3 avec DuckDB et Python", 
+  raw(lang: "Python", "import duckdb
 
+path = \"s3://bucket/sirene.parquet\" # Chemin commence par s3://
 con = duckdb.connect()
+con.sql(\"LOAD httpfs; SET s3_url_style = 'path';\")
 
-con.sql("LOAD httpfs; SET s3_url_style = 'path';")
-
-df = con.sql("""
-  FROM read_parquet('s3://bucket/sirene.parquet')
+df = con.sql(f\"\"\"
+  FROM read_parquet('{path}')
   SELECT siret, activitePrincipaleEtablissement
   WHERE etatAdministratifEtablissement == 'A'
-"""
+\"\"\"
 ).to_df()
+")
+)
 ```
 
 Puisque la lecture et le traitement se font par le biais d'une requête SQL, il est tout à fait possible de directement récupérer un agrégat. Par exemple pour dénombrer les entreprises actives pour chaque APET:
 
-```python
-import duckdb
+```{=typst} 
+#titled-raw-block(filename: "Traiter directement un Parquet depuis S3 avec DuckDB et Python", 
+  raw(lang: "Python", "import duckdb
 
+path = \"s3://bucket/sirene.parquet\" # Chemin commence par s3://
 con = duckdb.connect()
+con.sql(\"LOAD httpfs; SET s3_url_style = 'path';\")
 
-con.sql("LOAD httpfs; SET s3_url_style = 'path';")
-
-df = con.sql("""
-  FROM read_parquet('s3://bucket/sirene.parquet')
+df = con.sql(f\"\"\"
+  FROM read_parquet('{path}')
   SELECT count(siret) 
   WHERE etatAdministratifEtablissement == 'A'
   GROUP BY activitePrincipaleEtablissement
-"""
+\"\"\"
 ).to_df()
+")
+)
 ```
-
 
 ![_DuckDB_, un outil universel pour lire des données (empruntée à @mise_en_prod)](https://ensae-reproductibilite.github.io/website/duckdb-multisrc.png){#fig-duckdb-multisrc fig-align="center" height=400}
 
 
-# La diffusion de données au format Parquet
+# La diffusion de données au format Parquet {#sec-retex}
 
 Les premières expérimentations de diffusion de données au format `Parquet` représentaient des cas d'usage idéaux pour tester la réception de ce format par les utilisateurs. Le fichier de diffusion des données détaillées du recensement de la population représente, par exemple, environ 20 millions d'observations pour 80 variables. Ce fichier est à destination d'utilisateurs experts qui désirent construire des statistiques à façon à partir de croisements qui n'existent pas dans les données agrégées. 
 
-Ce fichier était historiquement diffusé aux formats `dBase` (un SGBD dont les origines remontent aux années 1980) et ``CSV`. Un millésime représentait, au format CSV, approche des 5Go sur disque. Il nécessitait donc des ressources mémoire conséquentes pour être lu dans un logiciel statistique comme `R` et `Python` puisque ce format ne permet pas une lecture parcimonieuse du fichier. 
+Ce fichier était historiquement diffusé aux formats `dBase` (un SGBD dont les origines remontent aux années 1980) et `CSV`. Un millésime approchait, au format CSV, les 5Go sur disque. Il nécessitait donc des ressources mémoire conséquentes pour être lu dans un logiciel statistique comme `R` et `Python` puisque ce format ne permet pas une lecture parcimonieuse du fichier. 
 
-La comparaison des performances en lecture de ces données au format CSV et Parquet est sans appel[^reproductibilite]. La mise à disposition d'un fichier n'oblige plus l'utilisateur à faire preuve d'ingéniosité pour découper son fichier de sorte à pouvoir le lire par bloc: cette propriété native du fichier `Parquet` permet aux utilisateurs de se concentrer sur l'exploitation des données. Pour aider les utilisateurs à s'approprier ce format, un guide, publié sur le blog du [SSPHub (ssphub.netlify.app/)](https://ssphub.netlify.app/), a accompagné la diffusion. 
+La comparaison des performances en lecture de ces données au format CSV et Parquet est sans appel[^reproductibilite]. La mise à disposition d'un fichier n'oblige plus l'utilisateur à faire preuve d'ingéniosité pour découper son fichier de sorte à pouvoir le lire par bloc: cette propriété native du fichier `Parquet` permet aux utilisateurs de se concentrer sur l'exploitation des données. Les utilisateurs du fichier ne sont généralement pas intéressés par l'intégralité des colonnes: l'orientation colonne de `Parquet` permettant de n'importer que les variables utiles à l'analyse représente un gain important de confort pour ces utilisateurs. Pour ceux ne s'intéressant qu'à des sous-ensemble de données, par exemple pour des études locales, les retours d'expérience, notamment ceux de @mauviere_2024_preparer_parquet, ont permis de prendre conscience du rôle important du tri des variables pour l'optimisation des filtres.
 
-![Exemple de comparaison des performances du format `Parquet` dans plusieurs cas d'usage sur les données détaillées du recensement de la population diffusées par l'Insee en 2023](https://inseefrlab.github.io/formation-bonnes-pratiques-git-R/slides/img/tableau-perf-parquet.png){#fig-tableau-parquet width="80%"}
+
+Pour aider les utilisateurs à s'approprier ce format, un guide d'utilisation des données a été publié sur le blog du réseau des _data scientists_ de la statistique publique, le [SSPHub (ssphub.netlify.app/)](https://ssphub.netlify.app/), pour accompagner la diffusion. 
+
+![Exemple de comparaison des performances du format `Parquet` dans plusieurs cas d'usage sur les données détaillées du recensement de la population diffusées par l'Insee en 2023](https://inseefrlab.github.io/formation-bonnes-pratiques-git-R/){#fig-tableau-parquet width="80%"}
 
 [^reproductibilite]: Ce tableau est produit dans le cadre de la formation aux bonnes pratiques `R` et `Git` développée par l'Insee et faisant la promotion du format `Parquet` pour le stockage de données. Pour reproduire celui-ci, se rendre sur [inseefrlab.github.io/formation-bonnes-pratiques-git-R/slides/complete.html](https://inseefrlab.github.io/formation-bonnes-pratiques-git-R/slides/complete.html). 
 
 
-Outre une utilisation efficace des ressources, la diffusion dans ce format appporte aussi du confort aux utilisateurs, notamment grâce à l'usage de `DuckDB`. Cette librairie, simple d'usage depuis `R` ou `Python` permet de lire ce fichier simplement. Prenons pour exemple un besoin précis: dénombrer les logements niçois dont les occupants ont emmenagé depuis 2020. En `Python`, cela se traduit par la requête SQL:
+Outre une utilisation efficace des ressources, la diffusion dans ce format appporte aussi du confort aux utilisateurs, notamment en montrant comment lire ces données avec `DuckDB`. Comme cette librairie est simple d'usage, le public cible de la diffusion de ces données, majoritairement utilisateur de `R` ou `Python`, pouvait ainsi s'approprier rapidement ce nouveau format. Pour illustrer cette simplicité d'usage, prenons pour exemple un besoin précis: dénombrer les logements niçois dont les occupants ont emmenagé depuis 2020. En `Python`, cela se traduit par la requête SQL:
 
 ```python
 import duckdb

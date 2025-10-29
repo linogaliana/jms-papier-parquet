@@ -112,7 +112,7 @@ Une autre propriété importante du format `Parquet` est sa capacité native à 
 
 ![Représentation sur le *filesystem* d'un fichier `Parquet` partitionné selon deux clés : l'année et le mois (empruntée à @mise_en_prod)](https://ensae-reproductibilite.github.io/website/parquet-partitions.png){#fig-parquet-partitions fig-align="center" height=300}
 
-Ces différentes propriétés techniques (compression, rapidité en lecture, typage...) font que le format `Parquet` n’est pas réservé aux architectures _big data_. Toute personne prête à utiliser un langage de programmation statistique utilisant des jeux de données poura bénéficier de ses qualités. Dans le domaine de la diffusion, cela signifie 
+Ces différentes propriétés techniques (compression, rapidité en lecture, typage...) font que le format `Parquet` n’est pas réservé aux architectures _big data_ ou aux données volumineuses. Toute personne prête à utiliser un langage de programmation statistique _open source_ comme `R` ou `Python` et ayant une utilisation intensive de données pourra bénéficier de ses qualités. Pour profiter pleinement de ses propriétés, il est recommandé de privilégier certaines librairies _open source_ très bien intégrées à `R` ou `Python`.
 
 
 ## Les librairies pour lire efficacement des `Parquet`
@@ -237,56 +237,70 @@ La comparaison des performances en lecture de ces données au format CSV et Parq
 
 Pour aider les utilisateurs à s'approprier ce format, un guide d'utilisation des données a été publié sur le blog du réseau des _data scientists_ de la statistique publique, le [SSPHub (ssphub.netlify.app/)](https://ssphub.netlify.app/), pour accompagner la diffusion. 
 
-![Exemple de comparaison des performances du format `Parquet` dans plusieurs cas d'usage sur les données détaillées du recensement de la population diffusées par l'Insee en 2023](https://inseefrlab.github.io/formation-bonnes-pratiques-git-R/){#fig-tableau-parquet width="80%"}
+![Exemple de comparaison des performances du format `Parquet` dans plusieurs cas d'usage sur les données détaillées du recensement de la population diffusées par l'Insee en 2023](https://inseefrlab.github.io/formation-bonnes-pratiques-git-R/slides/img/tableau-perf-parquet.png){#fig-tableau-parquet width="80%"}
 
-[^reproductibilite]: Ce tableau est produit dans le cadre de la formation aux bonnes pratiques `R` et `Git` développée par l'Insee et faisant la promotion du format `Parquet` pour le stockage de données. Pour reproduire celui-ci, se rendre sur [inseefrlab.github.io/formation-bonnes-pratiques-git-R/slides/complete.html](https://inseefrlab.github.io/formation-bonnes-pratiques-git-R/slides/complete.html). 
+[^reproductibilite]: Ce tableau est produit dans le cadre de la formation aux bonnes pratiques `R` et `Git` développée par l'Insee et faisant la promotion du format `Parquet` pour le stockage de données. Pour reproduire celui-ci, se rendre sur [inseefrlab.github.io/formation-bonnes-pratiques-git-R/slides/complete.html](https://inseefrlab.github.io/formation-bonnes-pratiques-git-R/). 
 
 
 Outre une utilisation efficace des ressources, la diffusion dans ce format appporte aussi du confort aux utilisateurs, notamment en montrant comment lire ces données avec `DuckDB`. Comme cette librairie est simple d'usage, le public cible de la diffusion de ces données, majoritairement utilisateur de `R` ou `Python`, pouvait ainsi s'approprier rapidement ce nouveau format. Pour illustrer cette simplicité d'usage, prenons pour exemple un besoin précis: dénombrer les logements niçois dont les occupants ont emmenagé depuis 2020. En `Python`, cela se traduit par la requête SQL:
 
-```python
-import duckdb
+```{=typst} 
+#titled-raw-block(filename: "Un exemple d'utilisation des données diffusées par l'Insee avec DuckDB et Python", 
+  raw(lang: "Python", "import duckdb
 
-url = "https://www.data.gouv.fr/api/1/datasets/r/fdf5b008-054b-4065-a819-3eb3313f8be7"
+url = \"https://www.data.gouv.fr/api/1/datasets/r/fdf5b008-054b-4065-a819-3eb3313f8be7\"
 duckdb.sql(
-  f"FROM read_parquet(\"{url}\") "
-  "SELECT COUNT(*) "
-  "WHERE COMMUNE = '06088' and CAST(AEMM AS int) > 2020 "
+  f\"FROM read_parquet(\\\"{url}\\\")\"
+  \"SELECT COUNT(*) \"
+  \"WHERE COMMUNE = '06088' and CAST(AEMM AS int) > 2020\"
+)
+
+).to_df()
+")
 )
 ```
 
+
 En `R`, il est possible d'écrire un code très proche quoiqu'un peu plus verbeux. 
 
-```r
-url <- "https://www.data.gouv.fr/api/1/datasets/r/fdf5b008-054b-4065-a819-3eb3313f8be7"
-
-con <- DBI::dbConnect(duckdb::duckdb(), ":memory:")
+```{=typst} 
+#titled-raw-block(filename: "Un exemple d'utilisation des données diffusées par l'Insee avec DuckDB et R", 
+  raw(lang: "Python", "url <- \"https://www.data.gouv.fr/api/1/datasets/r/fdf5b008-054b-4065-a819-3eb3313f8be7\"
+con <- DBI::dbConnect(duckdb::duckdb(), \":memory:\")
 query <- glue::glue(
-  "FROM read_parquet(\"{url}\") ",
-  "SELECT COUNT(*) ",
-  "WHERE COMMUNE = '06088' and CAST(AEMM AS int) > 2020 "
+  \"FROM read_parquet(\\\"{url}\\\") \",
+  \"SELECT COUNT(*) \",
+  \"WHERE COMMUNE = '06088' and CAST(AEMM AS int) > 2020\"
 )
 dbGetQuery(con, query)
+")
+)
 ```
 
 Il est néanmoins possible de directement utiliser la syntaxe très confortable de `dplyr` qui permet, par le biais du _package_ `dbplyr`, de déléguer les calculs au moteur d'exécution de `duckdb`
 
-```r
-library(dplyr)
-
-url <- "https://www.data.gouv.fr/api/1/datasets/r/fdf5b008-054b-4065-a819-3eb3313f8be7"
-con <- DBI::dbConnect(duckdb::duckdb(), ":memory:")
-df <- tbl(con, glue::glue("read_parquet(\"{url}\")"))
+```{=typst} 
+#titled-raw-block(filename: "Un exemple d'utilisation des données diffusées par l'Insee avec DuckDB et R via dplyr", 
+  raw(lang: "Python", "library(dplyr)
+  
+url <- \"https://www.data.gouv.fr/api/1/datasets/r/fdf5b008-054b-4065-a819-3eb3313f8be7\"
+con <- DBI::dbConnect(duckdb::duckdb(), \":memory:\")
+df <- tbl(con, glue::glue(\"read_parquet(\\\"{url}\\\")\"))
 df |>
   filter(COMMUNE = '06088', AEMM > 2020) |>
   tally() |>
   collect()
+")
+)
 ```
 
-Puisque les premières diffusions de `Parquet` en 2021 ont été appréciées par les utilisateurs des fichiers détails, ce format a été proposé dans la diffusion d'autres sources canonique de l'Insee. 
+Puisque les premières diffusions de `Parquet` en 2023 ont été appréciées par les utilisateurs des fichiers détails, ce format a été proposé dans la diffusion d'autres sources canonique de l'Insee. La @tbl-download illustre les principales sources diffusées par l'Insee sur `data.gouv` en `Parquet` et le nombre de téléchargements de celles-ci. L'Insee n'est d'ailleurs pas la seule institution de la statistique publique à avoir adopté ce format de diffusion pour certaines sources volumineuses. Le service statistique ministériel du ministère de l'intérieur (le SSMSI) diffuse, depuis 2024, par exemple, les [bases statistiques de la délinquance](https://www.data.gouv.fr/datasets/bases-statistiques-communale-departementale-et-regionale-de-la-delinquance-enregistree-par-la-police-et-la-gendarmerie-nationales/) dans ce format de données. 
 
 
 ```{python}
+#| label: tbl-download
+#| tbl-cap: "Principales sources de données diffusées par l'Insee sur data.gouv au format Parquet"
+#| echo: false
 import duckdb 
 from great_tables import *
 
@@ -299,11 +313,20 @@ ORDER BY metrics_resources_downloads DESC
 GT(tab)
 ```
 
-# Perspectives
+L'acculturation progressive des utilisateurs comme des producteurs d'_open data_ permet de prendre conscience de certaines bonnes pratiques à avoir dans la préparation du `Parquet` permettant de bénéficier des optimisations de ce fichier. Les principaux enjeux à avoir à l'esprit sont résumés par @mauviere_2024_preparer_parquet: définir des types de colonnes adéquats aux données représentées, trier le `Parquet` en fonction de variables qui servent fréquemment de filres, privilégier une compression `zstd` à `snappy` (défaut), mettre à disposition ce parquet sur des serveurs autorisant les [_range request_](https://developer.mozilla.org/fr/docs/Web/HTTP/Guides/Range_requests)... 
 
-Si ces premières expériences de diffusion de données aux formats `Parquet` ont permis d'illustrer l'apport de ce format pour les _data scientists_, statisticiens et géomaticiens utilisant des données détaillées, ce n'est pas la seule communauté pouvant bénéficier de ce format. Les spécialistes de _data visualisation_, une communauté plus proche du développement web, utilisant plutôt le langage `Javascript` peuvent également bénéficier de ce format. Grâce au portage de `DuckDB` en _Web Assembly_, il est possible de construire des _data visualisations_ réactives qui consomment des blocs de données, définis à partir d'une interface de sélection, d'un fichier `Parquet` plus large. Si ce dernier est bien organisé, par exemple avec des données ordonnées pour les sélecteurs mis dans l'interface, et des serveurs adéquats (qui autorisent les range requrst) il est possible d'avoir une consommation très efficace d'un fichier large. 
 
-Si Parquet n'a pas vocation à être le seul format de diffusion du fait de la nature du public utilisateur du site insee.fr et de ses besoins majoritaires (des données plus ou moins agrégées prêtes à l'emploi, pas forcément lues depuis un logiicel statistique), on peut néanmoins considérer que dans de nombreux cas d'usage analytique de la donnée, celui-ci pourrait servir comme mode d'accès aux données alternatif aux API. 
+# Perspectives {#sec-perspectives}
+
+Si ces premières expériences de diffusion de données au format `Parquet` ont permis d'illustrer l'apport de ce choix pour les _data scientists_, statisticiens et géomaticiens utilisant des données détaillées, ce n'est pas la seule communauté pouvant bénéficier de ce format. Les spécialistes de _data visualisation_, une communauté plus proche du développement web, utilisant plutôt le langage `Javascript` peuvent également bénéficier de ce format. Grâce au portage de `DuckDB` en _Web Assembly_[^wasm], il est possible de construire des _data visualisations_ interactives capables de lire directement des blocs de données issus d’un fichier `Parquet` volumineux. Ces blocs peuvent être sélectionnés dynamiquement via une interface utilisateur, sans nécessiter de serveur intermédiaire comme c'est le cas pour les solutions type `Shiny` ou `Steamlit`. Lorsque le fichier `Parquet` est structuré de manière optimale, la lecture partielle devient extrêmement efficace, ce qui permet d'avoir une _data visualisation_ très réactive même avoir des données de grande dimension[^atelier].  
+
+[^wasm]: _WebAssembly_ est une technologie complémentaire à `JavaScript` : elle permet d’exécuter dans le navigateur du code compilé à partir d’autres langages (comme `C++`, `Rust` ou `Go`). `JavaScript` reste le langage d’orchestration ; il charge, initialise et communique avec les modules _WebAssembly_, tandis que ces derniers exécutent les calculs lourds de manière plus efficace. Dans le contexte de la _data visualisation_, cela signifie qu’un moteur analytique comme `DuckDB` peut tourner directement dans le navigateur, sans serveur, tout en interagissant avec les bibliothèques `JavaScript` de visualisation (par exemple `D3.js` ou `Vega-Lite`).
+
+[^atelier]: Pour en apprendre plus sur ce sujet, se reporter vers un atelier sur le sujet animé dans le cadre du réseau des data scientists de la statistique publique: [https://ssphub.github.io/ssphub-ateliers-parquet/](https://ssphub.github.io/ssphub-ateliers-parquet/).
+
+Le format `Parquet` n'a pas vocation à devenir le principal mode de diffusion des données en raison du profil des utilisateurs du site _insee.fr_ dont les besoins portent majoritairement sur des données déjà agrégées et directement exploitables sans outil statistique. Il peut néanmoins constituer, dans de nombreux cas d’usage analytique, une alternative pertinente aux API pour l’accès aux données. Poussée à son extrême, la logique de consommation frugale d'un gros fichier permet d'envisager un modèle de diffusion de données faisant de fichiers `Parquet` de véritables API de données où, au lieu de définir des requêtes d'accès dans un `JSON`, celles-ci seraient définies à partir de requêtes SQL. C'est cette logique qu'adoptent certains acteurs centraux de l'écosystème `Parquet` ayant des besoins analytiques importants en proposant des lacs de données s'appuyant sur `Parquet`, en remplacement d'entrepôts de données reposant sur la logique des bases de données.  
+
+
 
 
 

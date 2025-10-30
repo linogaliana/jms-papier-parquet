@@ -25,6 +25,7 @@ abstract: |
     (Texte en anglais de 5 à 10 lignes)\ 
     `#lorem(30)`{=typst}
 bibliography: references.bib
+bibliographystyle: harvard-cite-them-right
 format:
   jms2025-typst:
     logo:
@@ -38,6 +39,7 @@ format:
 
 
 # Introduction
+
 
 Parmi les nombreuses innovations techniques ayant émergé au cours des années 2010 dans l'écosystème de la donnée, le format `Parquet` fait parti de celles ayant connues une adoption large parmi les _data scientists_ et statisticiens. Initialement conçu pour répondre à aux besoins des plateformes _big data_ comme [Hadoop](https://fr.wikipedia.org/wiki/Hadoop) - réduction du volume de stockage et du temps de lecture des données - celui-ci s'est diffusé au-delà de cette sphère et a même survécu à la plupart des technologies _big data_ qui sont, depuis, tombées en désuétude [@Tigani_2023].
 
@@ -294,6 +296,7 @@ df |>
 )
 ```
 
+
 Puisque les premières diffusions de `Parquet` en 2023 ont été appréciées par les utilisateurs des fichiers détails, ce format a été proposé dans la diffusion d'autres sources canonique de l'Insee. La @tbl-download illustre les principales sources diffusées par l'Insee sur `data.gouv` en `Parquet` et le nombre de téléchargements de celles-ci. L'Insee n'est d'ailleurs pas la seule institution de la statistique publique à avoir adopté ce format de diffusion pour certaines sources volumineuses. Le service statistique ministériel du ministère de l'intérieur (le SSMSI) diffuse, depuis 2024, par exemple, les [bases statistiques de la délinquance](https://www.data.gouv.fr/datasets/bases-statistiques-communale-departementale-et-regionale-de-la-delinquance-enregistree-par-la-police-et-la-gendarmerie-nationales/) dans ce format de données. 
 
 
@@ -301,16 +304,36 @@ Puisque les premières diffusions de `Parquet` en 2023 ont été appréciées pa
 #| label: tbl-download
 #| tbl-cap: "Principales sources de données diffusées par l'Insee sur data.gouv au format Parquet"
 #| echo: false
-import duckdb 
+import duckdb
 from great_tables import *
 
 tab = duckdb.sql("""
 FROM read_csv_auto('/home/onyxia/work/jms-papier-parquet/consult_data_gouv_parquet.csv')
-SELECT title, metrics_resources_downloads
+SELECT
+  title,
+  '[' || page || '](' || page || ')' AS page,
+  metrics_resources_downloads
 WHERE organization_name='Institut national de la statistique et des études économiques (Insee)'
 ORDER BY metrics_resources_downloads DESC
 """).to_df()
-GT(tab)
+
+tab["page"] = tab["page"].str.replace("https://www.", "")
+
+tab = (
+    GT(tab)
+    .fmt_number("metrics_resources_downloads", decimals = 0, sep_mark = " ")
+    .fmt_markdown("page")
+    .cols_label(
+        {
+            "title": "Base",
+            "page": md("Page sur `data.gouv`"),
+            "metrics_resources_downloads": "Téléchargements"
+        }
+    )
+    .tab_source_note(source_note=md("*Note*: Les statistiques sur le nombre de téléchargement représentent ici tous les produits publiés sur la page en question, pas exclusivement les fichiers `Parquet`"))
+)
+
+tab
 ```
 
 L'acculturation progressive des utilisateurs comme des producteurs d'_open data_ permet de prendre conscience de certaines bonnes pratiques à avoir dans la préparation du `Parquet` permettant de bénéficier des optimisations de ce fichier. Les principaux enjeux à avoir à l'esprit sont résumés par @mauviere_2024_preparer_parquet: définir des types de colonnes adéquats aux données représentées, trier le `Parquet` en fonction de variables qui servent fréquemment de filres, privilégier une compression `zstd` à `snappy` (défaut), mettre à disposition ce parquet sur des serveurs autorisant les [_range request_](https://developer.mozilla.org/fr/docs/Web/HTTP/Guides/Range_requests)... 

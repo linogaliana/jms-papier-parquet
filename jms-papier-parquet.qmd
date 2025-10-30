@@ -112,7 +112,7 @@ L'organisation en colonnes du format Parquet permet, à partir des métadonnées
 
 Une autre propriété importante du format `Parquet` est sa capacité native à produire des fichiers partitionnés, c'est à dire à distribuer un fichier de données selon une ou plusieurs clés de partitionnement. Dans la majorité des cas, les traitements statistiques ne concernent pas l'ensemble des données d'une source de données : on voudra souvent restreindre les calculs à une zone géographique, une fenêtre temporelle, etc. Si les données à traiter sont disponibles sous la forme d'un unique fichier, il faudra généralement charger l'ensemble des données en mémoire — a minima, les colonnes pertinentes — pour réaliser les traitements. A contrario, `Parquet` offre la possibilité native de partitionner un jeu de données selon une variable de filtrage fréquente (à la manière d'un index dans une base `SQL`) ce qui permet d'optimiser les traitements et d'accroître encore leur efficience (@fig-parquet-partitions). Dans cet exemple, effectuer une requête faisant intervenir seulement un ou quelques mois de données serait très efficient dans la mesure où seules les partitions pertinentes auront besoin d'être chargées en mémoire. Là encore, cette propriété rend le format `Parquet` particulièrement pertinent pour les traitements analytiques qui caractérisent les applications de *data science* [@dondon2023quels].
 
-![Représentation sur le *filesystem* d'un fichier `Parquet` partitionné selon deux clés : l'année et le mois (empruntée à @mise_en_prod)](https://ensae-reproductibilite.github.io/website/parquet-partitions.png){#fig-parquet-partitions fig-align="center" height=300}
+![Représentation sur le *filesystem* d'un fichier `Parquet` partitionné selon deux clés : l'année et le mois (empruntée à @mise_en_prod)](https://ensae-reproductibilite.github.io/website/parquet-partition.png){#fig-parquet-partitions fig-align="center" height=300}
 
 Ces différentes propriétés techniques (compression, rapidité en lecture, typage...) font que le format `Parquet` n’est pas réservé aux architectures _big data_ ou aux données volumineuses. Toute personne prête à utiliser un langage de programmation statistique _open source_ comme `R` ou `Python` et ayant une utilisation intensive de données pourra bénéficier de ses qualités. Pour profiter pleinement de ses propriétés, il est recommandé de privilégier certaines librairies _open source_ très bien intégrées à `R` ou `Python`.
 
@@ -123,7 +123,7 @@ Le format `Parquet` rend le stockage de données au format tabulaire beaucoup pl
 
 Deux outils majeurs ont émergé à cette fin au cours des dernières années. Le premier est [`Apache Arrow`](https://arrow.apache.org/), un format tabulaire de données en mémoire interopérable entre de nombreux langages (`Python`, `R`, `Java`, etc.). Le second est [`DuckDB`](https://duckdb.org/), un système de base de données portable et interopérable permettant de requêter des sources de données de nature très variée (@fig-duckdb-multisrc). Ces deux outils, bien que techniquement très différents en termes d'implémentation, présentent des avantages et des gains de performance semblables. D'abord, ils sont tous deux orientés-colonne et travaillent ainsi en synergie avec le format `Parquet`, dans la mesure où ils font persister les bénéfices de ce format de stockage dans la mémoire (@fig-arrow-memory).
 
-![Représentation en mémoire des données au format `Arrow` (empruntée à @mise_en_prod)](https://ensae-reproductibilite.github.io/website/arrow-memory.png){#fig-arrow-memory fig-align="center" height=400}
+![Représentation en mémoire des données au format `Arrow` (empruntée à la [documentation du projet Arrow](https://arrow.apache.org/overview/))](https://ensae-reproductibilite.github.io/website/arrow-memory.png){#fig-arrow-memory fig-align="center" height=400}
 
 Ces deux librairies, comme l'illustre la @fig-arrow-memory,  font perdurer en mémoire les avantages du format `Parquet` pour le stockage. Elles permettent également d'exploiter les avancées des processeurs récents en matière de vectorisation des opérations. Dans l'exemple de la @fig-arrow-memory, la représentation en colonne des données dans la mémoire permet à la requête de filtrage sur les données de la colonne `session_id` d'être beaucoup plus efficiente que dans un format en mémoire traditionnel. Cette approche optimisée permet d'ailleurs de lire des données de grande dimension, qui peuvent excéder largement la mémoire vive de l'ordinateur ou le serveur consommant la donnée [@muehleisen_2025_lost_decade_small_data].
 
@@ -225,7 +225,7 @@ df = con.sql(f\"\"\"
 )
 ```
 
-![_DuckDB_, un outil universel pour lire des données (empruntée à @mise_en_prod)](https://ensae-reproductibilite.github.io/website/duckdb-multisrc.png){#fig-duckdb-multisrc fig-align="center" height=400}
+![_DuckDB_, un outil universel pour lire des données (Source: [MotherDuck](https://motherduck.com/blog/duckdb-enterprise-5-key-categories/))](https://ensae-reproductibilite.github.io/website/duckdb-multisrc.png){#fig-duckdb-multisrc fig-align="center" height=400}
 
 
 # La diffusion de données au format Parquet {#sec-retex}

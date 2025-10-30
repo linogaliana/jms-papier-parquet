@@ -1,0 +1,357 @@
+title,page,organization_name,last_modified,created_at,metrics_views,metrics_resources_downloads,metrics_discussions
+"Base Sirene des entreprises et de leurs établissements (SIREN, SIRET)",https://www.data.gouv.fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/,Institut national de la statistique et des études économiques (Insee),2025-09-18,2018-08-24,1366595,12069794,673
+"Bases statistiques communale, départementale et régionale de la délinquance enregistrée par la police et la gendarmerie nationales ",https://www.data.gouv.fr/datasets/bases-statistiques-communale-departementale-et-regionale-de-la-delinquance-enregistree-par-la-police-et-la-gendarmerie-nationales/,Ministère de l'intérieur,2025-07-11,2022-03-01,218609,119050,17
+Géolocalisation des établissements du répertoire SIRENE-pour les études statistiques,https://www.data.gouv.fr/datasets/geolocalisation-des-etablissements-du-repertoire-sirene-pour-les-etudes-statistiques/,Institut national de la statistique et des études économiques (Insee),2025-09-21,2022-01-05,65342,62705,23
+"Open Food Facts - Produits alimentaires : ingrédients, nutrition, labels",https://www.data.gouv.fr/datasets/open-food-facts-produits-alimentaires-ingredients-nutrition-labels/,Open Food Facts,2025-06-29,2013-11-21,65245,37787,12
+Bureaux de vote et adresses de leurs électeurs,https://www.data.gouv.fr/datasets/bureaux-de-vote-et-adresses-de-leurs-electeurs/,Institut national de la statistique et des études économiques (Insee),2024-04-02,2023-06-26,63935,21164,8
+Émissions de gaz à effet de serre des installations soumises à quota de l'UE,https://www.data.gouv.fr/datasets/emissions-de-gaz-a-effet-de-serre-des-installations-soumises-a-quota-de-lue/,,2025-07-07,2021-05-28,35272,7845,0
+Agrégation des fichiers des personnes décédées,https://www.data.gouv.fr/datasets/agregation-des-fichiers-des-personnes-decedees/,data.gouv.fr,2025-09-09,2024-09-05,34769,171496,4
+Données des élections agrégées,https://www.data.gouv.fr/datasets/donnees-des-elections-agregees/,data.gouv.fr,2025-07-23,2023-06-08,32750,77075,7
+Registre National des Cantines,https://www.data.gouv.fr/datasets/registre-national-des-cantines/,Ministère de l'Agriculture et de l'Alimentation,2025-09-04,2023-06-09,27470,26820,8
+Service statistique ministériel de la sécurité intérieure – Base des séries chronologiques,https://www.data.gouv.fr/datasets/service-statistique-ministeriel-de-la-securite-interieure-base-des-series-chronologiques/,Ministère de l'intérieur,2025-09-04,2022-06-20,25000,3294,0
+Base sur la qualité et la sécurité des soins (anciennement Scope Santé),https://www.data.gouv.fr/datasets/base-sur-la-qualite-et-la-securite-des-soins-anciennement-scope-sante/,Haute Autorité de santé (HAS),2025-09-09,2021-09-22,24076,26331,4
+Indicateurs annuels de la victimation et du sentiment d’insécurité issus des enquêtes Cadre de Vie et Sécurité,https://www.data.gouv.fr/datasets/indicateurs-annuels-de-la-victimation-et-du-sentiment-dinsecurite-issus-des-enquetes-cadre-de-vie-et-securite/,Ministère de l'intérieur,2025-06-26,2022-02-08,20645,4091,0
+Données financières détaillées des entreprises (format parquet),https://www.data.gouv.fr/datasets/donnees-financieres-detaillees-des-entreprises-format-parquet/,Signaux Faibles,2025-09-16,2023-12-24,10051,741,2
+Données essentielles de la commande publique consolidées (format tabulaire),https://www.data.gouv.fr/datasets/donnees-essentielles-de-la-commande-publique-consolidees-format-tabulaire/,,2025-09-20,2021-04-30,9424,3554,2
+Recensement de la population - Fichiers détail : Individus localisés au canton-ou-ville ,https://www.data.gouv.fr/datasets/recensement-de-la-population-fichiers-detail-individus-localises-au-canton-ou-ville/,Institut national de la statistique et des études économiques (Insee),2025-02-12,2023-10-23,9386,4481,0
+RNA agrégé à l'échelle nationale,https://www.data.gouv.fr/datasets/rna-agrege-a-lechelle-nationale/,data.gouv.fr,2025-09-01,2024-10-21,8580,35942,0
+Recensement de la population - Fichiers détail : Logements ordinaires,https://www.data.gouv.fr/datasets/recensement-de-la-population-fichiers-detail-logements-ordinaires/,Institut national de la statistique et des études économiques (Insee),2025-02-12,2023-10-23,8389,3921,0
+"Base Étendue, Améliorée et Unifiée des Annonces des Marchés Publics",https://www.data.gouv.fr/datasets/base-etendue-amelioree-et-unifiee-des-annonces-des-marches-publics/,,2025-09-22,2024-05-05,6836,4377,1
+Open Prices,https://www.data.gouv.fr/datasets/open-prices/,Open Food Facts,2024-11-27,2024-11-27,6708,2507,0
+base prénoms insee format parquet,https://www.data.gouv.fr/datasets/base-prenoms-insee-format-parquet/,icem7,2023-11-21,2023-11-21,6543,785,0
+Occupation du sol à Grande échelle - OCSGE-format geoparquet,https://www.data.gouv.fr/datasets/occupation-du-sol-a-grande-echelle-ocsge-format-geoparquet/,,2025-01-22,2024-10-15,6146,3421,0
+Base SIRENE des établissements 2024 géolocalisée - geoparquet,https://www.data.gouv.fr/datasets/base-sirene-des-etablissements-2024-geolocalisee-geoparquet/,icem7,2024-01-24,2024-01-05,6128,607,0
+Données sur la localisation et l’accès de la population aux équipements,https://www.data.gouv.fr/datasets/donnees-sur-la-localisation-et-lacces-de-la-population-aux-equipements/,Institut national de la statistique et des études économiques (Insee),2025-07-16,2025-04-15,5880,2524,7
+Paris 2024 - Sites de compétition,https://www.data.gouv.fr/datasets/paris-2024-sites-de-competition/,Paris 2024,2024-09-10,2024-09-10,5874,11995,0
+Découpage géographique des quartiers - Ville de Lorient,https://www.data.gouv.fr/datasets/decoupage-geographique-des-quartiers-ville-de-lorient/,Ville de Lorient,2020-11-06,2020-11-06,5870,7126,0
+Base prénoms 2024 Insee,https://www.data.gouv.fr/datasets/base-prenoms-2024-insee/,icem7,2025-07-23,2025-07-23,5443,10,0
+Population des communes du Finistère,https://www.data.gouv.fr/datasets/population-des-communes-du-finistere/,Conseil départemental du Finistère,2025-01-03,2022-06-22,5255,1838,0
+Liste des délibérations adoptées par le conseil municipal - Ville de Lorient,https://www.data.gouv.fr/datasets/liste-des-deliberations-adoptees-par-le-conseil-municipal-ville-de-lorient/,Ville de Lorient,2025-07-09,2025-07-09,5156,6208,0
+Adresses de rattachement des quartiers – Ville de Lorient,https://www.data.gouv.fr/datasets/adresses-de-rattachement-des-quartiers-ville-de-lorient/,Ville de Lorient,2025-09-01,2025-09-01,4855,6098,1
+Liste des adresses  (Base Adresse Locale) - Ville de Lorient,https://www.data.gouv.fr/datasets/liste-des-adresses-base-adresse-locale-ville-de-lorient/,Ville de Lorient,2025-09-01,2025-09-01,4838,6321,2
+Composition de l'assemblée délibérante de Morbihan énergies,https://www.data.gouv.fr/datasets/composition-de-lassemblee-deliberante-de-morbihan-energies-1/,Morbihan énergies,2019-04-10,2019-04-10,4769,3899,0
+BAN format parquet,https://www.data.gouv.fr/datasets/ban-format-parquet/,icem7,2025-05-23,2023-11-08,4739,508,1
+Etablissements d'accueil des jeunes enfants en Mayenne,https://www.data.gouv.fr/datasets/etablissements-daccueil-des-jeunes-enfants-en-mayenne/,Le Conseil Départemental de la Mayenne,2025-09-19,2025-09-19,4698,7687,0
+Paris 2024 - Événements Olympiade Culturelle,https://www.data.gouv.fr/datasets/paris-2024-evenements-olympiade-culturelle/,Paris 2024,2024-09-15,2024-09-15,4636,8472,0
+Base SIRENE V3 consolidée,https://www.data.gouv.fr/datasets/base-sirene-v3-consolidee/,Fleury-sur-Orne,2022-12-02,2022-12-02,4581,7921,0
+Unité Foncière des  personnes morales ( locaux et parcelles),https://www.data.gouv.fr/datasets/unite-fonciere-des-personnes-morales-locaux-et-parcelles/,,2024-02-22,2024-02-21,4486,1922,0
+PARQUET - Données climatologiques de base - mensuelles - quotidiennes - horaires - 6 minutes (format parquet),https://www.data.gouv.fr/datasets/parquet-donnees-climatologiques-de-base-mensuelles-quotidiennes-horaires-6-minutes-format-parquet/,,2025-01-16,2024-04-09,4377,6654,2
+Principaux axes routiers du département,https://www.data.gouv.fr/datasets/principaux-axes-routiers-du-departement/,Morbihan énergies,2018-10-19,2018-10-19,4360,5736,0
+Adresses de rattachement des bureaux de vote – Ville de Lorient,https://www.data.gouv.fr/datasets/adresses-de-rattachement-des-bureaux-de-vote-ville-de-lorient/,Ville de Lorient,2025-09-01,2025-09-01,4359,5592,0
+Carte scolaire des établissements primaires - Ville de Lorient,https://www.data.gouv.fr/datasets/carte-scolaire-des-etablissements-primaires-ville-de-lorient/,Ville de Lorient,2021-07-26,2021-07-26,4356,4426,0
+Liste des élus au Conseil Municipal - Ville de Lorient,https://www.data.gouv.fr/datasets/liste-des-elus-au-conseil-municipal-ville-de-lorient/,Ville de Lorient,2025-08-31,2025-08-31,4271,5092,0
+Découpage géographique des anciens secteurs (réunion publique de quartier) - Ville de Lorient,https://www.data.gouv.fr/datasets/decoupage-geographique-des-anciens-secteurs-reunion-publique-de-quartier-ville-de-lorient/,Ville de Lorient,2019-01-28,2019-01-28,4266,3850,0
+Découpage géographique des bureaux de vote - Ville de Lorient,https://www.data.gouv.fr/datasets/decoupage-geographique-des-bureaux-de-vote-ville-de-lorient/,Ville de Lorient,2022-05-16,2022-05-16,4191,5029,0
+Budget du département du Finistère,https://www.data.gouv.fr/datasets/budget-du-departement-du-finistere/,Conseil départemental du Finistère,2024-10-01,2021-04-27,4114,1598,0
+Liste des entreprises (Base SIRENE v3) - Commune de Lorient,https://www.data.gouv.fr/datasets/liste-des-entreprises-base-sirene-v3-commune-de-lorient/,Ville de Lorient,2019-08-29,2019-08-29,4110,5921,0
+Adresses de rattachement des établissements scolaires – Ville de Lorient,https://www.data.gouv.fr/datasets/adresses-de-rattachement-des-etablissements-scolaires-ville-de-lorient/,Ville de Lorient,2025-09-01,2025-09-01,4110,6266,0
+Paris 2024 - PSA spectateurs,https://www.data.gouv.fr/datasets/paris-2024-psa-spectateurs/,Paris 2024,2024-10-04,2024-10-04,4094,7741,0
+Adresses de rattachement des îlots IRIS – Ville de Lorient,https://www.data.gouv.fr/datasets/adresses-de-rattachement-des-ilots-iris-ville-de-lorient/,Ville de Lorient,2025-09-01,2025-09-01,4073,6924,0
+Tarification de l'eau potable dans le Finistère,https://www.data.gouv.fr/datasets/tarification-de-leau-potable-dans-le-finistere/,Conseil départemental du Finistère,2025-01-03,2018-11-27,3933,1833,0
+Stations d'épuration collectives et industrielles du Finistère,https://www.data.gouv.fr/datasets/stations-depuration-collectives-et-industrielles-du-finistere/,Conseil départemental du Finistère,2021-07-08,2018-11-27,3922,4760,0
+Prénoms des nouveau-nés - Ville de Lorient,https://www.data.gouv.fr/datasets/prenoms-des-nouveau-nes-ville-de-lorient/,Ville de Lorient,2020-08-28,2020-08-28,3914,4283,0
+Assistants maternels de la Mayenne,https://www.data.gouv.fr/datasets/assistants-maternels-de-la-mayenne/,Le Conseil Départemental de la Mayenne,2025-09-19,2025-09-19,3900,7314,0
+Actes d'état-civil - Ville de Lorient,https://www.data.gouv.fr/datasets/actes-detat-civil-ville-de-lorient/,Ville de Lorient,2019-03-29,2019-03-29,3900,3591,0
+Recensement de population - Ville de Lorient,https://www.data.gouv.fr/datasets/recensement-de-population-ville-de-lorient/,Ville de Lorient,2021-06-22,2021-06-22,3878,3996,0
+Résultats électoraux - Ville de Lorient,https://www.data.gouv.fr/datasets/resultats-electoraux-ville-de-lorient/,Ville de Lorient,2022-06-27,2022-06-27,3773,3592,0
+Annuaire local des associations - Ville de Lorient,https://www.data.gouv.fr/datasets/annuaire-local-des-associations-ville-de-lorient/,Ville de Lorient,2025-08-31,2025-08-31,3766,5852,0
+Liste des bâtiments du département du Finistère - 2023,https://www.data.gouv.fr/datasets/liste-des-batiments-du-departement-du-finistere-2023-1/,Conseil départemental du Finistère,2024-12-31,2018-11-27,3696,2457,0
+Effectifs des agents du département du Finistère répartis par catégorie,https://www.data.gouv.fr/datasets/effectifs-des-agents-du-departement-du-finistere-repartis-par-categorie/,Conseil départemental du Finistère,2024-10-03,2018-11-27,3686,1607,0
+Nombre de bénéficiaires du Fonds Unique d'Aide (FUA) par commune depuis 2018,https://www.data.gouv.fr/datasets/nombre-de-beneficiaires-du-fonds-unique-daide-fua-par-commune-depuis-2018/,Conseil départemental du Finistère,2025-01-03,2020-09-26,3589,1699,0
+Localisation des défibrillateurs municipaux (DAE) - Ville de Lorient,https://www.data.gouv.fr/datasets/localisation-des-defibrillateurs-municipaux-dae-ville-de-lorient/,Ville de Lorient,2025-08-31,2025-08-31,3577,14267,0
+Maison d'assistants maternels en Mayenne,https://www.data.gouv.fr/datasets/maison-dassistants-maternels/,Le Conseil Départemental de la Mayenne,2023-01-13,2023-01-13,3570,5871,0
+Localisation des centres de vote - Ville de Lorient,https://www.data.gouv.fr/datasets/localisation-des-centres-de-vote-ville-de-lorient/,Ville de Lorient,2025-09-01,2025-09-01,3534,5594,0
+Paris 2024 - Centres de préparation aux Jeux,https://www.data.gouv.fr/datasets/paris-2024-centres-de-preparation-aux-jeux/,Paris 2024,2024-02-05,2024-02-05,3503,5594,0
+Carte scolaire des établissements maternels - Ville de Lorient,https://www.data.gouv.fr/datasets/carte-scolaire-des-etablissements-maternels-ville-de-lorient/,Ville de Lorient,2019-01-28,2019-01-28,3487,4943,0
+Nids de goélands recensés – Ville de Lorient,https://www.data.gouv.fr/datasets/nids-de-goelands-recenses-ville-de-lorient/,Ville de Lorient,2025-09-05,2025-09-05,3459,5347,0
+Adhérents de Morbihan énergies,https://www.data.gouv.fr/datasets/adherents-de-morbihan-energies-1/,Morbihan énergies,2018-10-19,2018-10-19,3456,2802,0
+Populations légales communales 2017-2021,https://www.data.gouv.fr/datasets/populations-legales-communales-2017-2021/,icem7,2024-01-23,2023-12-28,3456,737,0
+Nombre de bénéficiaires du dispositif Avenir Jeunes 29 (AJ29) par commune depuis 2018,https://www.data.gouv.fr/datasets/nombre-de-beneficiaires-du-dispositif-avenir-jeunes-29-aj29-par-commune-depuis-2018/,Conseil départemental du Finistère,2025-01-03,2020-09-26,3434,2500,0
+Stationnements particuliers - Ville de Lorient,https://www.data.gouv.fr/datasets/stationnements-particuliers-ville-de-lorient/,Ville de Lorient,2025-08-31,2025-08-31,3261,5054,0
+Capacité d’accueil Petite Enfance par EPCI (hors ASE) dans le Finistère,https://www.data.gouv.fr/datasets/capacite-daccueil-petite-enfance-par-epci-hors-ase-dans-le-finistere/,Conseil départemental du Finistère,2024-10-01,2020-12-09,3241,1160,0
+Liste des maires de Lorient et de Keryado - Ville de Lorient,https://www.data.gouv.fr/datasets/liste-des-maires-de-lorient-et-de-keryado-ville-de-lorient/,Ville de Lorient,2020-12-23,2020-12-23,3236,4086,0
+Conseillers départementaux du Finistère,https://www.data.gouv.fr/datasets/conseillers-departementaux-du-finistere/,Conseil départemental du Finistère,2024-05-27,2018-11-27,3224,3167,0
+Certificats d'économie d'énergie (C2E) - Morbihan énergies,https://www.data.gouv.fr/datasets/certificats-deconomie-denergie-c2e-morbihan-energies-2/,Morbihan énergies,2018-10-19,2018-10-19,3197,4439,0
+Archives départementales de la Mayenne - Registre des entrées depuis 2022,https://www.data.gouv.fr/datasets/archives-departementales-de-la-mayenne-registre-des-entrees-depuis-2022/,Le Conseil Départemental de la Mayenne,2025-03-24,2023-09-15,3192,4035,0
+Établissements d'accueil de jeunes enfants (EAJE) du Finistère,https://www.data.gouv.fr/datasets/etablissements-daccueil-de-jeunes-enfants-eaje-du-finistere/,Conseil départemental du Finistère,2024-12-20,2023-06-30,3180,942,0
+Lorientais morts pour la France - Ville de Lorient,https://www.data.gouv.fr/datasets/lorientais-morts-pour-la-france-ville-de-lorient/,Ville de Lorient,2020-12-15,2020-12-15,3167,4418,1
+Liste des voies et lieux - Ville de Lorient,https://www.data.gouv.fr/datasets/liste-des-voies-ville-de-lorient/,Ville de Lorient,2025-08-31,2025-08-31,3136,6032,0
+Nombre d'enfants ayant fait l'objet d'un signalement dans le département du Finistère,https://www.data.gouv.fr/datasets/nombre-denfants-ayant-fait-lobjet-dun-signalement-dans-le-departement-du-finistere/,Conseil départemental du Finistère,2025-01-03,2018-11-27,3133,1634,0
+Paris 2024 - Zones de dépose reprise PFR-PSH,https://www.data.gouv.fr/datasets/paris-2024-zones-de-depose-reprise-pfr-psh/,Paris 2024,2024-10-01,2024-10-01,3122,7346,0
+Nombre d'électeurs par bureau de vote,https://www.data.gouv.fr/datasets/nombre-delecteurs-par-bureau-de-vote/,Ville de Quiberon,2019-10-14,2019-10-14,3108,8278,0
+Equipements collectifs publics du Conseil départemental de la Mayenne,https://www.data.gouv.fr/datasets/equipements-collectifs-publics-du-conseil-departemental-de-la-mayenne/,Le Conseil Départemental de la Mayenne,2025-09-01,2025-09-01,3078,7303,0
+Zones PLU France,https://www.data.gouv.fr/datasets/zones-plu-france/,,2024-10-22,2024-10-22,3061,2221,0
+Routes barrées en Mayenne,https://www.data.gouv.fr/datasets/routes-barrees-en-mayenne/,Le Conseil Départemental de la Mayenne,2025-09-01,2025-09-01,3024,6738,0
+"Nombre d’enfants ayant fait l’objet d’une Aide Éducative à Domicile, dans le Finistère",https://www.data.gouv.fr/datasets/nombre-denfants-ayant-fait-lobjet-dune-aide-educative-a-domicile-dans-le-finistere/,Conseil départemental du Finistère,2025-01-03,2020-12-09,3008,741,0
+Synthèse des Recettes et des Dépenses du Budget Primitif en 2019,https://www.data.gouv.fr/datasets/synthese-des-recettes-et-des-depenses-du-budget-primitif-en-2019/,Conseil départemental du Finistère,2025-01-03,2019-07-05,3000,1078,0
+Nombre de bénéficiaires du Fonds de Solidarité Logement (FSL) par commune depuis 2018,https://www.data.gouv.fr/datasets/nombre-de-beneficiaires-du-fonds-de-solidarite-logement-fsl-par-commune-depuis-2018/,Conseil départemental du Finistère,2025-01-03,2020-09-26,2991,1165,0
+Subventions de la Ville de Bourges de 2021 à 2024,https://www.data.gouv.fr/datasets/subventions-de-la-ville-de-bourges-de-2021-a-2024/,Communauté d'Agglomération de Bourges,2025-04-04,2022-02-07,2989,4782,0
+"Bénéficiaires du revenu de solidarité active (RSA) par EPCI du département du Finistère, titulaires d'un droit",https://www.data.gouv.fr/datasets/beneficiaires-du-revenu-de-solidarite-active-rsa-par-epci-du-departement-du-finistere-titulaires-dun-droit/,Conseil départemental du Finistère,2024-09-30,2018-11-27,2978,1243,0
+Évolution du nombre d’assistant·e·s maternel·le·s par EPCI dans le Finistère,https://www.data.gouv.fr/datasets/evolution-du-nombre-dassistant-e-s-maternel-le-s-par-epci-dans-le-finistere/,Conseil départemental du Finistère,2024-12-20,2020-12-09,2969,1473,0
+Paris 2024 - FAQ,https://www.data.gouv.fr/datasets/paris-2024-faq/,Paris 2024,2023-12-08,2023-12-08,2969,3803,0
+DVF 2022 format parquet,https://www.data.gouv.fr/datasets/dvf-2022-format-parquet/,icem7,2023-11-08,2023-11-08,2967,951,0
+Hackaviz Numérique Responsable - Enquête Usages & Réemploi,https://www.data.gouv.fr/datasets/hackaviz-numerique-responsable-enquete-usages-reemploi/,Conseil départemental du Finistère,2024-12-31,2023-06-13,2955,748,0
+Fréquentation annuelle du Musée départemental breton,https://www.data.gouv.fr/datasets/frequentation-annuelle-du-musee-departemental-breton/,Conseil départemental du Finistère,2024-12-19,2018-11-27,2953,850,0
+Nombre de bénéficiaires des prestations Personnes Âgées versées par le Conseil Départemental du Finistère,https://www.data.gouv.fr/datasets/nombre-de-beneficiaires-des-prestations-personnes-agees-versees-par-le-conseil-departemental-du-finistere/,Conseil départemental du Finistère,2025-01-03,2020-12-09,2947,1317,0
+"Revenus, pauvreté et niveau de vie en 2019 - Données carroyées  - Dispositif Fichier localisé social et fiscal (Filosofi)",https://www.data.gouv.fr/datasets/revenus-pauvrete-et-niveau-de-vie-en-2019-donnees-carroyees-dispositif-fichier-localise-social-et-fiscal-filosofi/,,2024-10-03,2024-10-02,2946,265,0
+Nombre de foyers ayant bénéficié d’une allocation mensuelle enfance dans le Finistère,https://www.data.gouv.fr/datasets/nombre-de-foyers-ayant-beneficie-dune-allocation-mensuelle-enfance-dans-le-finistere/,Conseil départemental du Finistère,2025-01-03,2020-12-09,2927,780,0
+Liste des ouvrages d'art du département du Finistère,https://www.data.gouv.fr/datasets/liste-des-ouvrages-dart-du-departement-du-finistere/,Conseil départemental du Finistère,2025-01-02,2018-11-27,2926,1188,0
+Signalements de nids de frelons – Ville de Lorient,https://www.data.gouv.fr/datasets/signalements-de-nids-de-frelons-ville-de-lorient/,Ville de Lorient,2025-09-01,2025-09-01,2915,5430,0
+Catalogue Open data 53,https://www.data.gouv.fr/datasets/catalogue-open-data-53/,Le Conseil Départemental de la Mayenne,2023-01-18,2023-07-17,2901,6166,0
+"Communes, cantons et Epci 2025 - Admin Express COG PLUS IGN",https://www.data.gouv.fr/datasets/communes-cantons-et-epci-2025-admin-express-cog-plus-ign/,icem7,2025-06-26,2025-06-24,2859,6443,0
+Bénéficiaires du Fonds social européen du Finistère,https://www.data.gouv.fr/datasets/beneficiaires-du-fonds-social-europeen-du-finistere/,Conseil départemental du Finistère,2024-09-30,2020-12-09,2849,1599,0
+Liste des actions métiers du NUMERIQUE sur le territoire du Morbihan,https://www.data.gouv.fr/datasets/liste-des-actions-metiers-du-numerique-sur-le-territoire-du-morbihan/,Morbihan énergies,2023-03-29,2023-03-29,2845,4986,0
+Subventions - Ville de Lorient,https://www.data.gouv.fr/datasets/subventions-ville-de-lorient/,Ville de Lorient,2025-07-31,2025-07-31,2844,4600,0
+Maisons d'assistants maternels (MAM) du Finistère,https://www.data.gouv.fr/datasets/maisons-dassistants-maternels-mam-du-finistere/,Conseil départemental du Finistère,2025-01-02,2023-06-30,2835,1228,0
+Contours IRIS - 2015 - Morbihan,https://www.data.gouv.fr/datasets/contours-iris-2015-morbihan/,Morbihan énergies,2018-10-19,2018-10-19,2832,5204,0
+Terrasses autorisées sur l'espace public - Ville de Lorient,https://www.data.gouv.fr/datasets/terrasses-autorisees-sur-lespace-public-ville-de-lorient/,Ville de Lorient,2020-07-09,2020-07-09,2832,9678,0
+Voitures par énergie et par commune,https://www.data.gouv.fr/datasets/voitures-par-energie-et-par-commune/,icem7,2024-02-13,2024-02-13,2818,469,0
+Compar:IA,https://www.data.gouv.fr/datasets/compar-ia/,Ministère de la Culture,2025-08-18,2025-03-27,2812,1400,0
+Taux d’évaluation des situations familiales réalisées par le Conseil départemental du Finistère suite à une information préoccupante,https://www.data.gouv.fr/datasets/taux-devaluation-des-situations-familiales-realisees-par-le-conseil-departemental-du-finistere-suite-a-une-information-preoccupante/,Conseil départemental du Finistère,2025-01-03,2020-12-09,2801,1199,0
+Bénéficiaires de l’aide à la formation au BAFA octroyée par le Conseil départemental du Finistère,https://www.data.gouv.fr/datasets/beneficiaires-de-laide-a-la-formation-au-bafa-octroyee-par-le-conseil-departemental-du-finistere/,Conseil départemental du Finistère,2024-09-30,2020-04-29,2797,2281,0
+Liste des actions métiers EQUIPEMENTS & RESEAUX sur le territoire du Morbihan,https://www.data.gouv.fr/datasets/liste-des-actions-metiers-equipements-reseaux-sur-le-territoire-du-morbihan/,Morbihan énergies,2023-03-29,2023-03-29,2795,4872,0
+Paris 2024 - Boutiques officielles,https://www.data.gouv.fr/datasets/paris-2024-boutiques-officielles/,Paris 2024,2024-06-27,2024-06-27,2789,5945,0
+Tarification de l'assainissement dans le Finistère,https://www.data.gouv.fr/datasets/tarification-de-lassainissement-dans-le-finistere/,Conseil départemental du Finistère,2025-01-03,2018-11-27,2771,2431,0
+Aide alimentaire en Finistère,https://www.data.gouv.fr/datasets/aide-alimentaire-en-finistere/,Conseil départemental du Finistère,2024-09-26,2021-05-27,2766,6454,0
+Porteurs de projets financés par le Fonds Départemental d'Aide à l'Initiative des Jeunes (FDAIJ) du Conseil départemental du Finistère,https://www.data.gouv.fr/datasets/porteurs-de-projets-finances-par-le-fonds-departemental-daide-a-linitiative-des-jeunes-fdaij-du-conseil-departemental-du-finistere/,Conseil départemental du Finistère,2025-01-03,2020-04-29,2671,2050,0
+Paris 2024 - Parkings vélo spectateurs en IDF,https://www.data.gouv.fr/datasets/paris-2024-parkings-velo-spectateurs-en-idf/,Paris 2024,2024-06-20,2024-06-20,2668,7267,0
+Nombre d’enfants ayant fait l’objet d’une AEMO/AEMOR dans le Finistère,https://www.data.gouv.fr/datasets/nombre-denfants-ayant-fait-lobjet-dune-aemo-aemor-dans-le-finistere/,Conseil départemental du Finistère,2025-01-03,2020-12-09,2646,1652,0
+Filaire de voies Strasbourg format parquet,https://www.data.gouv.fr/datasets/filaire-de-voies-strasbourg-format-parquet/,icem7,2024-03-03,2024-03-03,2629,467,0
+NAF révision 2 format parquet,https://www.data.gouv.fr/datasets/naf-revision-2-format-parquet/,icem7,2024-01-07,2023-11-23,2620,450,0
+CATALOGUE DU HACKATHON DATA du 28 Novembre 2023,https://www.data.gouv.fr/datasets/catalogue-du-hackathon-data-du-28-novembre-2023/,Le Conseil Départemental de la Mayenne,2023-12-04,2023-12-04,2606,3225,0
+Liste des actions métiers MOBILITES DURABLES sur le territoire du Morbihan,https://www.data.gouv.fr/datasets/liste-des-actions-metiers-mobilites-durables-sur-le-territoire-du-morbihan/,Morbihan énergies,2023-03-29,2023-03-29,2558,5989,0
+Accompagnement social alimentaire en Finistère,https://www.data.gouv.fr/datasets/accompagnement-social-alimentaire-en-finistere/,Conseil départemental du Finistère,2024-09-26,2021-05-27,2553,1139,0
+Liste des marchés publics passés en 2018 par le département du Finistère,https://www.data.gouv.fr/datasets/liste-des-marches-publics-passes-en-2018-par-le-departement-du-finistere/,Conseil départemental du Finistère,2025-01-02,2018-11-27,2553,973,0
+Toilettes publiques Quiberon,https://www.data.gouv.fr/datasets/toilettes-publiques-quiberon/,Ville de Quiberon,2020-12-15,2020-12-15,2544,3049,0
+Paris 2024 - Calendrier des sessions [Version simplifiée],https://www.data.gouv.fr/datasets/paris-2024-calendrier-des-sessions-version-simplifiee/,Paris 2024,2024-07-30,2024-07-30,2540,5748,0
+Hackaviz Numérique Responsable - Datavisualisations,https://www.data.gouv.fr/datasets/hackaviz-numerique-responsable-datavisualisations/,Conseil départemental du Finistère,2024-12-31,2023-06-13,2534,596,0
+Nombre de mineurs ayant fait l'objet d'un placement à l'aide sociale à l'enfance dans le département du Finistère,https://www.data.gouv.fr/datasets/nombre-de-mineurs-ayant-fait-lobjet-dun-placement-a-laide-sociale-a-lenfance-dans-le-departement-du-finistere/,Conseil départemental du Finistère,2025-01-03,2018-11-27,2484,1911,0
+Limitations de tonnage sur les routes départementales,https://www.data.gouv.fr/datasets/limitations-de-tonnage-sur-les-routes-departementales/,Le Conseil Départemental de la Mayenne,2025-09-01,2025-09-01,2483,2279,0
+Évolution de la capacité totale d’accueil Petite Enfance par EPCI (hors ASE) dans le Finistère,https://www.data.gouv.fr/datasets/evolution-de-la-capacite-totale-daccueil-petite-enfance-par-epci-hors-ase-dans-le-finistere/,Conseil départemental du Finistère,2024-12-20,2020-12-09,2482,1686,0
+Resultats Election Législative 1er Tour - 2022 - Ville de Bourges - 1ere Circonscription,https://www.data.gouv.fr/datasets/resultats-election-legislative-1er-tour-2022-ville-de-bourges-1ere-circonscription/,Communauté d'Agglomération de Bourges,2022-06-13,2022-06-12,2482,4211,0
+Liste des collections acquises par le Musée départemental breton,https://www.data.gouv.fr/datasets/liste-des-collections-acquises-par-le-musee-departemental-breton/,Conseil départemental du Finistère,2024-12-31,2018-11-27,2477,1626,0
+Liste des actions métiers ENERGIES sur le territoire du Morbihan,https://www.data.gouv.fr/datasets/liste-des-actions-metiers-energies-sur-le-territoire-du-morbihan/,Morbihan énergies,2023-03-29,2023-03-29,2470,5463,0
+Liste des marchés publics passés en 2017 par le département du Finistère,https://www.data.gouv.fr/datasets/liste-des-marches-publics-passes-en-2017-par-le-departement-du-finistere/,Conseil départemental du Finistère,2025-01-02,2018-11-27,2469,1297,0
+Fréquentation des expositions du Musée départemental breton,https://www.data.gouv.fr/datasets/frequentation-des-expositions-du-musee-departemental-breton/,Conseil départemental du Finistère,2024-12-19,2018-11-27,2469,1909,0
+Bureaux de vote Bourges,https://www.data.gouv.fr/datasets/bureaux-de-vote-bourges/,Communauté d'Agglomération de Bourges,2022-04-07,2022-04-06,2468,4158,0
+Hackaviz Numérique Responsable - Enquête Sobriété numérique,https://www.data.gouv.fr/datasets/hackaviz-numerique-responsable-enquete-sobriete-numerique/,Conseil départemental du Finistère,2024-12-31,2023-06-13,2462,633,0
+Resultats Election Presidentielle 2e Tour - 2022 - Ville de Bourges,https://www.data.gouv.fr/datasets/resultats-election-presidentielle-2e-tour-2022-ville-de-bourges/,Communauté d'Agglomération de Bourges,2022-04-25,2022-04-24,2462,3309,0
+Bilan des émissions de gaz à effet de serre du Département du Finistère,https://www.data.gouv.fr/datasets/bilan-des-emissions-de-gaz-a-effet-de-serre-du-departement-du-finistere/,Conseil départemental du Finistère,2024-09-30,2021-07-01,2460,1510,0
+Montants des prestations Personnes Handicapées versées par le Conseil Départemental du Finistère,https://www.data.gouv.fr/datasets/montants-des-prestations-personnes-handicapees-versees-par-le-conseil-departemental-du-finistere/,Conseil départemental du Finistère,2025-01-02,2020-12-09,2450,1644,0
+"Convention de subventions attribuées par le Conseil départemental de la Mayenne, depuis 2017",https://www.data.gouv.fr/datasets/convention-de-subventions-attribuees-par-le-conseil-departemental-de-la-mayenne-depuis-2017/,Le Conseil Départemental de la Mayenne,2025-07-17,2023-05-02,2436,5911,0
+Membres du groupement d'achat gaz,https://www.data.gouv.fr/datasets/membres-du-groupement-dachat-gaz/,Morbihan énergies,2019-01-04,2019-01-04,2419,4581,0
+Resultats Election Législative 2eme Tour - 2022 - Ville de Bourges - 2eme Circonscription,https://www.data.gouv.fr/datasets/resultats-election-legislative-2eme-tour-2022-ville-de-bourges-2eme-circonscription/,Communauté d'Agglomération de Bourges,2022-06-20,2022-06-19,2409,4788,0
+Nombre de bénéficiaires des prestations Personnes Handicapées versées par le Conseil Départemental du Finistère,https://www.data.gouv.fr/datasets/nombre-de-beneficiaires-des-prestations-personnes-handicapees-versees-par-le-conseil-departemental-du-finistere/,Conseil départemental du Finistère,2025-01-03,2020-12-09,2405,1524,0
+Effectifs des agents du département du Finistère répartis par filière,https://www.data.gouv.fr/datasets/effectifs-des-agents-du-departement-du-finistere-repartis-par-filiere/,Conseil départemental du Finistère,2024-10-03,2018-11-27,2405,1691,0
+Nombre d’évaluations des situations familiales réalisées par le Conseil départemental du Finistère,https://www.data.gouv.fr/datasets/nombre-devaluations-des-situations-familiales-realisees-par-le-conseil-departemental-du-finistere/,Conseil départemental du Finistère,2025-01-03,2020-12-09,2391,1442,0
+"Bénéficiaires du revenu de solidarité active (RSA) par EPCI du département du Finistère, titulaires d'un contrat",https://www.data.gouv.fr/datasets/beneficiaires-du-revenu-de-solidarite-active-rsa-par-epci-du-departement-du-finistere-titulaires-dun-contrat/,Conseil départemental du Finistère,2024-09-30,2018-11-27,2379,1226,0
+IRVE formt geoparquet 20231222,https://www.data.gouv.fr/datasets/irve-formt-geoparquet-20231222/,icem7,2024-01-09,2023-12-23,2369,414,0
+Réexposition des données Finess,https://www.data.gouv.fr/datasets/reexposition-des-donnees-finess/,data.gouv.fr,2025-09-10,2025-03-26,2363,9132,0
+Fiches Actions PVD Bracieux,https://www.data.gouv.fr/datasets/fiches-actions-pvd-bracieux/,Communauté de communes du Grand Chambord ,2025-03-20,2023-12-21,2361,7027,0
+Montants des prestations Personnes Âgées versées par le Conseil Départemental du Finistère,https://www.data.gouv.fr/datasets/montants-des-prestations-personnes-agees-versees-par-le-conseil-departemental-du-finistere/,Conseil départemental du Finistère,2025-01-02,2020-12-09,2348,1530,0
+Paris 2024 - Calendrier des sessions [Version simplifiée ENG],https://www.data.gouv.fr/datasets/paris-2024-calendrier-des-sessions-version-simplifiee-eng/,Paris 2024,2024-07-30,2024-07-30,2348,5583,0
+Budget Ville de Bourges - 2024,https://www.data.gouv.fr/datasets/budget-ville-de-bourges-2024/,Communauté d'Agglomération de Bourges,2025-09-12,2024-07-10,2329,9481,0
+Budget Bourges Plus - 2023,https://www.data.gouv.fr/datasets/budget-bourges-plus-2023/,Communauté d'Agglomération de Bourges,2024-05-06,2024-04-10,2315,3465,0
+Saisines du médiateur du Conseil départemental de la Mayenne depuis 2016,https://www.data.gouv.fr/datasets/saisines-du-mediateur-du-conseil-departemental-de-la-mayenne-depuis-2016/,Le Conseil Départemental de la Mayenne,2024-07-30,2023-10-15,2314,4076,0
+Compte administratif du département du Finistère,https://www.data.gouv.fr/datasets/compte-administratif-du-departement-du-finistere/,Conseil départemental du Finistère,2024-10-01,2018-11-27,2314,1608,0
+"Annuaire Santé : Liste, localisation et tarifs des professionnels de santé",https://www.data.gouv.fr/datasets/annuaire-sante-liste-localisation-et-tarifs-des-professionnels-de-sante-1/,Fleury-sur-Orne,2019-10-05,2019-10-05,2310,4364,0
+Recensement de la population communal et Filosofi depuis 2015 - France métropolitaine ,https://www.data.gouv.fr/datasets/recensement-de-la-population-communal-et-filosofi-depuis-2015-france-metropolitaine/,,2024-11-04,2024-11-04,2296,201,0
+Liste des oeuvres exposées au Musée départemental breton,https://www.data.gouv.fr/datasets/liste-des-oeuvres-exposees-au-musee-departemental-breton/,Conseil départemental du Finistère,2025-01-02,2018-11-27,2288,1168,0
+Budget Ville de Bourges - De 2018 à 2023,https://www.data.gouv.fr/datasets/budget-ville-de-bourges-de-2018-a-2023/,Communauté d'Agglomération de Bourges,2024-07-02,2021-09-21,2288,4661,0
+Nombre de mesures judiciaires d’investigation éducative décidées dans le Finistère,https://www.data.gouv.fr/datasets/nombre-de-mesures-judiciaires-dinvestigation-educative-decidees-dans-le-finistere/,Conseil départemental du Finistère,2025-01-03,2020-12-09,2285,666,0
+Résultats Election Législative 1er Tour - 2024 - Ville de Bourges - 2eme circonscription,https://www.data.gouv.fr/datasets/resultats-election-legislative-1er-tour-2024-ville-de-bourges-2eme-circonscription/,Communauté d'Agglomération de Bourges,2024-07-01,2024-07-01,2283,9704,0
+Budget Bourges Plus - 2024,https://www.data.gouv.fr/datasets/budget-bourges-plus-2024/,Communauté d'Agglomération de Bourges,2024-05-06,2024-04-10,2279,3771,0
+Points de localisation (PLO) du graphe routier du département de la Mayenne,https://www.data.gouv.fr/datasets/points-de-localisation-plo-du-graphe-routier-du-departement-de-la-mayenne/,Le Conseil Départemental de la Mayenne,2025-09-01,2024-06-07,2251,5690,0
+Paris 2024 - Voies Olympiques et Paralympiques,https://www.data.gouv.fr/datasets/paris-2024-voies-olympiques-et-paralympiques/,Paris 2024,2024-10-01,2024-10-01,2213,6897,0
+Filaire voiries Toulouse métropole format geoparquet,https://www.data.gouv.fr/datasets/filaire-voiries-toulouse-metropole-format-geoparquet/,icem7,2023-12-19,2023-11-21,2208,278,0
+Données climatologiques quotidiennes de base de toutes les stations du département 75 pour 2023 et 2024,https://www.data.gouv.fr/datasets/donnees-climatologiques-quotidiennes-de-base-de-toutes-les-stations-du-departement-75-pour-2023-et-2024/,,2024-04-09,2024-04-09,2204,181,0
+Base Fantoir - avril 2023 - format parquet,https://www.data.gouv.fr/datasets/base-fantoir-avril-2023-format-parquet/,icem7,2023-09-29,2023-09-29,2200,750,0
+Réseau et coordination des politiques Jeunesse dans le Finistère,https://www.data.gouv.fr/datasets/reseau-et-coordination-des-politiques-jeunesse-dans-le-finistere/,Conseil départemental du Finistère,2025-01-03,2020-12-09,2177,607,0
+Filaire du graphe routier du département de la Mayenne,https://www.data.gouv.fr/datasets/filaire-du-graphe-routier-du-departement-de-la-mayenne/,Le Conseil Départemental de la Mayenne,2025-09-01,2024-06-07,2171,5334,0
+Communes 2023 format parquet,https://www.data.gouv.fr/datasets/communes-2023-format-parquet/,icem7,2024-01-22,2024-01-12,2167,475,0
+Nombre de bénéficiaires d’une allocation Jeune Majeur dans le Finistère,https://www.data.gouv.fr/datasets/nombre-de-beneficiaires-dune-allocation-jeune-majeur-dans-le-finistere/,Conseil départemental du Finistère,2025-01-03,2020-12-09,2119,1836,0
+Liste bâtiments par compétence,https://www.data.gouv.fr/datasets/liste-batiments-par-competence/,Communauté de communes du Grand Chambord ,2022-11-29,2023-09-21,2118,5636,0
+Equipements recevant du public - Ville de Lorient,https://www.data.gouv.fr/datasets/equipements-recevant-du-public-ville-de-lorient/,Ville de Lorient,2025-09-01,2025-09-01,2115,6106,0
+Resultats Election Législative 2eme Tour - 2022 - Ville de Bourges - 1ere Circonscription,https://www.data.gouv.fr/datasets/resultats-election-legislative-2eme-tour-2022-ville-de-bourges-1ere-circonscription/,Communauté d'Agglomération de Bourges,2022-06-20,2022-06-19,2112,2923,0
+Compteurs de trafic routier sur les routes départementales,https://www.data.gouv.fr/datasets/compteurs-de-trafic-routier-sur-les-routes-departementales/,Le Conseil Départemental de la Mayenne,2025-09-01,2025-09-01,2108,1425,0
+Budget Bourges Plus - De 2018 à 2022,https://www.data.gouv.fr/datasets/budget-bourges-plus-de-2018-a-2022/,Communauté d'Agglomération de Bourges,2023-07-24,2021-09-22,2108,5774,0
+Nomenclature communale des catégories d'espace 2024,https://www.data.gouv.fr/datasets/nomenclature-communale-des-categories-despace-2024/,icem7,2025-01-08,2025-01-08,2094,173,0
+Paris 2024 - Périmètres de sécurité,https://www.data.gouv.fr/datasets/paris-2024-perimetres-de-securite/,Paris 2024,2024-10-01,2024-10-01,2075,4962,0
+Resultats Election Législative 1er Tour - 2022 - Ville de Bourges - 3eme Circonscription,https://www.data.gouv.fr/datasets/resultats-election-legislative-1er-tour-2022-ville-de-bourges-3eme-circonscription/,Communauté d'Agglomération de Bourges,2022-06-13,2022-06-12,2056,4158,0
+Résultats Elections Européennes - 2024 - Ville de Bourges,https://www.data.gouv.fr/datasets/resultats-elections-europeennes-2024-ville-de-bourges/,Communauté d'Agglomération de Bourges,2024-06-04,2024-06-09,2051,4068,0
+Prénoms donnés à Bourges entre 2017 et 2024,https://www.data.gouv.fr/datasets/prenoms-donnes-a-bourges-entre-2017-et-2024/,Communauté d'Agglomération de Bourges,2025-03-10,2018-02-05,2049,4583,0
+"LEGI: Codes, lois et règlements consolidés vectorisés",https://www.data.gouv.fr/datasets/legi-codes-lois-et-reglements-consolides-vectorises/,Direction interministérielle du numérique,2025-09-15,2025-07-25,2040,1046,0
+Évolution des mesures d’accompagnement et de développement éducatif à domicile dans le Finistère,https://www.data.gouv.fr/datasets/evolution-des-mesures-daccompagnement-et-de-developpement-educatif-a-domicile-dans-le-finistere/,Conseil départemental du Finistère,2024-12-20,2020-12-09,2037,1699,0
+Données climatologiques quotidiennes de base de toutes les stations du département 75 entre 1950 et 2022,https://www.data.gouv.fr/datasets/donnees-climatologiques-quotidiennes-de-base-de-toutes-les-stations-du-departement-75-entre-1950-et-2022/,,2024-04-09,2024-04-09,2032,162,0
+Limitations de vitesse sur les routes départementales,https://www.data.gouv.fr/datasets/limitations-de-vitesse-sur-les-routes-departementales/,Le Conseil Départemental de la Mayenne,2025-09-01,2025-09-01,2016,1636,0
+Budget Primitif 2019 décliné par Grand Engagement,https://www.data.gouv.fr/datasets/budget-primitif-2019-decline-par-grand-engagement/,Conseil départemental du Finistère,2024-10-01,2019-07-05,2001,690,0
+Sit@del2 - Surface de locaux commencés par type en date réelle - Millésimé,https://www.data.gouv.fr/datasets/sit-del2-surface-de-locaux-commences-par-type-en-date-reelle-millesime/,Fleury-sur-Orne,2022-06-20,2022-06-20,1995,2504,0
+Subventions de la Ville de Bourges de 2018 à 2020,https://www.data.gouv.fr/datasets/subventions-de-la-ville-de-bourges-de-2018-a-2020/,Communauté d'Agglomération de Bourges,2021-05-11,2021-05-10,1994,3329,0
+Paris 2024 - Zones de dépose reprise accrédités et spectateurs,https://www.data.gouv.fr/datasets/paris-2024-zones-de-depose-reprise-accredites-et-spectateurs/,Paris 2024,2024-10-01,2024-10-01,1980,6357,0
+Resultats Election Presidentielle 1er Tour - 2022 - Ville de Bourges,https://www.data.gouv.fr/datasets/resultats-election-presidentielle-1er-tour-2022-ville-de-bourges/,Communauté d'Agglomération de Bourges,2022-04-11,2022-04-10,1963,4257,0
+Kit de lissage par fenêtre mobile avec la grille H3 de niveau 7 - France métropolitaine,https://www.data.gouv.fr/datasets/kit-de-lissage-par-fenetre-mobile-avec-la-grille-h3-de-niveau-7-france-metropolitaine/,icem7,2024-07-11,2024-07-11,1949,748,0
+Résultats Election législative 2ème Tour - 2024 - Ville de Bourges - 2eme circonscription,https://www.data.gouv.fr/datasets/resultats-election-legislative-2eme-tour-2024-ville-de-bourges-2eme-circonscription/,Communauté d'Agglomération de Bourges,2024-07-08,2024-07-07,1940,3692,0
+Sections de routes départementales selon le trafic,https://www.data.gouv.fr/datasets/sections-de-routes-departementales-selon-le-trafic/,Le Conseil Départemental de la Mayenne,2025-09-01,2025-09-01,1938,1994,0
+Entreprises du bassin de vie du collège de Bracieux accueillant des collégiens en stage d'observation - CC Grand Chambord (2022-2023),https://www.data.gouv.fr/datasets/entreprises-du-bassin-de-vie-du-college-de-bracieux-accueillant-des-collegiens-en-stage-dobservation-cc-grand-chambord-2022-2023/,Communauté de communes du Grand Chambord ,2022-11-29,2023-10-18,1924,5825,0
+Résultats Election législative 1er Tour - 2024 - Ville de Bourges - 3eme circonscription,https://www.data.gouv.fr/datasets/resultats-election-legislative-1er-tour-2024-ville-de-bourges-3eme-circonscription/,Communauté d'Agglomération de Bourges,2024-07-01,2024-07-01,1906,5224,0
+Grands Projets votés en 2019,https://www.data.gouv.fr/datasets/grands-projets-votes-en-2019/,Conseil départemental du Finistère,2024-12-19,2019-07-05,1900,910,0
+Paris 2024 - Zones de dépose reprise spectateurs,https://www.data.gouv.fr/datasets/paris-2024-zones-de-depose-reprise-spectateurs/,Paris 2024,2024-09-11,2024-09-11,1888,6747,0
+Résultats Election législative 2ème Tour - 2024 - Ville de Bourges - 3eme circonscription,https://www.data.gouv.fr/datasets/resultats-election-legislative-2eme-tour-2024-ville-de-bourges-3eme-circonscription/,Communauté d'Agglomération de Bourges,2024-07-08,2024-07-07,1878,3109,0
+Les établissements d'enseignement supérieur sur Bourges Plus,https://www.data.gouv.fr/datasets/les-etablissements-denseignement-superieur-sur-bourges-plus/,Communauté d'Agglomération de Bourges,2021-02-25,2021-02-24,1857,2714,0
+Limitations de hauteur sur les routes départementales,https://www.data.gouv.fr/datasets/limitations-de-hauteur-sur-les-routes-departementales/,Le Conseil Départemental de la Mayenne,2025-09-01,2025-09-01,1855,1823,0
+Hackaviz Numérique Responsable - Enquête Streaming,https://www.data.gouv.fr/datasets/hackaviz-numerique-responsable-enquete-streaming/,Conseil départemental du Finistère,2024-12-31,2023-06-13,1852,571,0
+Demande de valeurs foncières,https://www.data.gouv.fr/datasets/demande-de-valeurs-foncieres/,Fleury-sur-Orne,2025-09-14,2025-09-14,1835,4327,0
+"Nombre de logements rénovés énergétiquement dans le cadre de l'OPAH (Opération Programmée d'Amélioration de l'Habitat), par commune",https://www.data.gouv.fr/datasets/nombre-de-logements-renoves-energetiquement-dans-le-cadre-de-lopah-operation-programmee-damelioration-de-lhabitat-par-commune/,Communauté de communes du Grand Chambord ,2023-01-23,2023-09-22,1833,6728,0
+Limitations de largeur sur les routes départementales,https://www.data.gouv.fr/datasets/limitations-de-largeur-sur-les-routes-departementales/,Le Conseil Départemental de la Mayenne,2025-09-01,2025-09-01,1815,1784,0
+Hébergements Touristiques du Grand Chambord (+Muides),https://www.data.gouv.fr/datasets/hebergements-touristiques-du-grand-chambord-muides/,Communauté de communes du Grand Chambord ,2024-01-26,2023-02-16,1811,6456,0
+"Paquets SP1 Arome - Résolution 0,01° - Prévision du 9 avril 2024 à 6h00",https://www.data.gouv.fr/datasets/paquets-sp1-arome-resolution-0-01deg-prevision-du-9-avril-2024-a-6h00/,,2024-04-09,2024-04-09,1809,158,0
+Résultats Election législative 2ème Tour - 2024 - Ville de Bourges - 1ere circonscription,https://www.data.gouv.fr/datasets/resultats-election-legislative-2eme-tour-2024-ville-de-bourges-1ere-circonscription/,Communauté d'Agglomération de Bourges,2024-07-08,2024-07-07,1782,2807,0
+Déviations en Mayenne,https://www.data.gouv.fr/datasets/deviations-en-mayenne-1/,Le Conseil Départemental de la Mayenne,2025-09-01,2025-09-01,1727,4592,0
+Resultats Election Législative 2eme Tour - 2022 - Ville de Bourges - 3eme Circonscription,https://www.data.gouv.fr/datasets/resultats-election-legislative-2eme-tour-2022-ville-de-bourges-3eme-circonscription/,Communauté d'Agglomération de Bourges,2022-06-20,2022-06-19,1727,4238,0
+Point numérique - CC Grand Chambord,https://www.data.gouv.fr/datasets/point-numerique-cc-grand-chambord-2022/,Communauté de communes du Grand Chambord ,2024-05-02,2023-10-18,1655,3832,0
+Demande de valeurs foncières géolocalisée,https://www.data.gouv.fr/datasets/demande-de-valeurs-foncieres-geolocalisee/,Fleury-sur-Orne,2021-06-01,2021-06-01,1573,3375,0
+Aires de covoiturage,https://www.data.gouv.fr/datasets/aires-de-covoiturage-5/,Communauté d'Agglomération de Bourges,2025-04-22,2024-04-14,1558,4589,0
+Fiches pratiques Service-Public.fr vectorisées,https://www.data.gouv.fr/datasets/fiches-pratiques-service-public-fr-vectorisees/,Direction interministérielle du numérique,2025-09-15,2025-05-23,1556,524,0
+Subventions de Bourges Plus de 2020 à 2023,https://www.data.gouv.fr/datasets/subventions-de-bourges-plus-de-2020-a-2023/,Communauté d'Agglomération de Bourges,2024-05-06,2024-05-06,1548,2827,0
+Délibérations - CC Grand Chambord (2020),https://www.data.gouv.fr/datasets/deliberations-cc-grand-chambord-2020/,Communauté de communes du Grand Chambord ,2022-11-29,2023-10-19,1527,4402,0
+Paris 2024 - Parkings accrédités,https://www.data.gouv.fr/datasets/paris-2024-parkings-accredites/,Paris 2024,2024-10-01,2024-10-01,1517,5680,0
+Les brevets à l'INPI et l'OEB,https://www.data.gouv.fr/datasets/les-brevets-a-linpi-et-loeb/,Fleury-sur-Orne,2019-06-29,2019-06-29,1509,2838,0
+Resultats Election Législative 1er Tour - 2022 - Ville de Bourges - 2eme Circonscription,https://www.data.gouv.fr/datasets/resultats-election-legislative-1er-tour-2022-ville-de-bourges-2eme-circonscription/,Communauté d'Agglomération de Bourges,2022-06-13,2022-06-12,1477,3627,0
+Accidents corporels de la circulation millésimé,https://www.data.gouv.fr/datasets/accidents-corporels-de-la-circulation-millesime-1/,Fleury-sur-Orne,2021-03-09,2021-03-09,1472,2534,0
+Paris 2024 - Tracés des road events,https://www.data.gouv.fr/datasets/paris-2024-traces-des-road-events/,Paris 2024,2024-09-05,2024-09-05,1457,5309,0
+Résultats Election législative 1er Tour - 2024 - Ville de Bourges - 1ere circonscription,https://www.data.gouv.fr/datasets/resultats-election-legislative-1er-tour-2024-ville-de-bourges-1ere-circonscription/,Communauté d'Agglomération de Bourges,2024-07-01,2024-06-30,1429,3772,0
+Référentiel de l’organisation administrative de l’État vectorisé,https://www.data.gouv.fr/datasets/referentiel-de-lorganisation-administrative-de-letat-vectorise/,Direction interministérielle du numérique,2025-09-15,2025-05-23,1322,522,0
+Base Permanente des Equipements (Ensemble) géolocalisée,https://www.data.gouv.fr/datasets/base-permanente-des-equipements-ensemble-geolocalisee/,Fleury-sur-Orne,2021-01-17,2021-01-17,1275,2779,0
+DOLE : les dossiers législatifs vectorisés,https://www.data.gouv.fr/datasets/dole-les-dossiers-legislatifs-vectorises/,Direction interministérielle du numérique,2025-09-15,2025-07-24,1271,11,0
+Populations légales - Millésimé,https://www.data.gouv.fr/datasets/populations-legales-millesime-1/,Fleury-sur-Orne,2021-01-07,2021-01-07,1262,2841,0
+Subventions de Bourges Plus en 2018 et 2019,https://www.data.gouv.fr/datasets/subventions-de-bourges-plus-en-2018-et-2019/,Communauté d'Agglomération de Bourges,2020-12-02,2020-12-01,1259,3682,0
+Data portals registry,https://www.data.gouv.fr/datasets/data-portals-registry/,Dateno,2025-04-02,2025-04-02,1170,1715,0
+Service-public.fr - Annuaire de l’administration - Base de données locales vectorisée,https://www.data.gouv.fr/datasets/service-public-fr-annuaire-de-ladministration-base-de-donnees-locales-vectorisee/,Direction interministérielle du numérique,2025-09-15,2025-07-24,1158,700,0
+Les délibérations de la CNIL vectorisées,https://www.data.gouv.fr/datasets/les-deliberations-de-la-cnil-vectorisees/,Direction interministérielle du numérique,2025-09-15,2025-07-24,1115,132,0
+Base des diagnostics de performance énergétique (DPE) des bâtiments non résidentiels,https://www.data.gouv.fr/datasets/base-des-diagnostics-de-performance-energetique-dpe-des-batiments-non-residentiels/,Fleury-sur-Orne,2019-06-29,2019-06-29,1081,1503,0
+Effectifs d'élèves des écoles du premier degré,https://www.data.gouv.fr/datasets/effectifs-deleves-des-ecoles-du-premier-degre/,Fleury-sur-Orne,2021-01-17,2021-01-17,1077,4904,0
+Fiscalité locale - Millésimé,https://www.data.gouv.fr/datasets/fiscalite-locale-millesime/,Fleury-sur-Orne,2025-03-10,2025-03-10,1056,2039,0
+Base nationale des décès dédoublonnée,https://www.data.gouv.fr/datasets/base-nationale-des-deces-dedoublonnee/,icem7,2025-09-10,2025-09-01,1048,,0
+Consommation électrique annuelle,https://www.data.gouv.fr/datasets/consommation-electrique-annuelle/,Fleury-sur-Orne,2018-06-26,2018-06-26,971,5580,0
+Naissances de 2009 à 2018,https://www.data.gouv.fr/datasets/naissances-de-2009-a-2018/,Fleury-sur-Orne,2020-01-15,2020-01-15,946,2138,0
+Parkings et stationnements,https://www.data.gouv.fr/datasets/parkings-et-stationnements/,Fleury-sur-Orne,2025-09-15,2025-09-15,924,3696,0
+Horaires de passages du réseau Twisto en temps réel,https://www.data.gouv.fr/datasets/horaires-de-passages-du-reseau-twisto-en-temps-reel/,Fleury-sur-Orne,2025-06-23,2025-06-23,906,2581,0
+Aires de jeux,https://www.data.gouv.fr/datasets/aires-de-jeux-5/,Fleury-sur-Orne,2018-05-29,2018-05-29,902,2750,0
+Inventaire matériel de l'Espace Public Numérique (EPN),https://www.data.gouv.fr/datasets/inventaire-materiel-de-lespace-public-numerique-epn/,Fleury-sur-Orne,2018-06-02,2018-06-02,884,1342,0
+Jointure Dataset BOAMP 2025 <> Dataset SIREN (côté acheteurs),https://www.data.gouv.fr/datasets/jointure-dataset-boamp-2025-dataset-siren-cote-acheteurs/,AuFilDuBoamp.com,2025-09-22,2025-07-01,854,18,0
+Hydrographie : Cours d'eau,https://www.data.gouv.fr/datasets/hydrographie-cours-deau/,Fleury-sur-Orne,2020-01-15,2020-01-15,850,4668,0
+Résultats des élections municipales et communautaires 2014,https://www.data.gouv.fr/datasets/resultats-des-elections-municipales-et-communautaires-2014/,Fleury-sur-Orne,2018-06-17,2018-06-17,848,2269,0
+Défibrillateurs,https://www.data.gouv.fr/datasets/defibrillateurs-6/,Fleury-sur-Orne,2018-05-29,2018-05-29,844,2712,0
+Hydrographie : Points d'eau en France,https://www.data.gouv.fr/datasets/hydrographie-points-deau-en-france/,Fleury-sur-Orne,2020-01-15,2020-01-15,838,5198,0
+Répertoire National des Associations - Fleury-sur-Orne,https://www.data.gouv.fr/datasets/repertoire-national-des-associations-fleury-sur-orne/,Fleury-sur-Orne,2025-08-18,2025-08-18,835,6879,0
+Fiches pratiques Travail Emploi vectorisées,https://www.data.gouv.fr/datasets/fiches-pratiques-travail-emploi-vectorisees/,Direction interministérielle du numérique,2025-09-15,2025-05-23,834,215,0
+Liste des maires successifs,https://www.data.gouv.fr/datasets/liste-des-maires-successifs/,Fleury-sur-Orne,2019-06-29,2019-06-29,810,2159,0
+Structure de la population active par CSP et activité,https://www.data.gouv.fr/datasets/structure-de-la-population-active-par-csp-et-activite/,Fleury-sur-Orne,2021-10-12,2021-10-12,802,1713,0
+Effectifs d'élèves des établissements du second degré,https://www.data.gouv.fr/datasets/effectifs-deleves-des-etablissements-du-second-degre/,Fleury-sur-Orne,2021-01-17,2021-01-17,799,1498,0
+Consommation annuelle d’électricité et gaz et par secteur d’activité,https://www.data.gouv.fr/datasets/consommation-annuelle-delectricite-et-gaz-et-par-secteur-dactivite/,Fleury-sur-Orne,2019-06-29,2019-06-29,788,1595,0
+Agrégation des fichiers de Documents de filiation informatisés (DFI) des parcelles,https://www.data.gouv.fr/datasets/agregation-des-fichiers-de-documents-de-filiation-informatises-dfi-des-parcelles/,data.gouv.fr,2025-09-15,2025-09-15,779,75,0
+Populations légales- Millésimé,https://www.data.gouv.fr/datasets/populations-legales-millesime/,Fleury-sur-Orne,2021-01-16,2021-01-16,756,2811,0
+Déploiement du haut et très haut débit,https://www.data.gouv.fr/datasets/deploiement-du-haut-et-tres-haut-debit/,Fleury-sur-Orne,2021-10-28,2021-10-28,745,2829,0
+Restaurants,https://www.data.gouv.fr/datasets/restaurants/,Fleury-sur-Orne,2018-05-29,2018-05-29,730,4334,0
+Lieux culturels,https://www.data.gouv.fr/datasets/lieux-culturels-2/,Fleury-sur-Orne,2018-06-17,2018-06-17,718,2161,0
+Etablissements du domaine sanitaire et social,https://www.data.gouv.fr/datasets/etablissements-du-domaine-sanitaire-et-social/,Fleury-sur-Orne,2024-10-10,2024-10-10,709,2394,0
+CONSTIT: les décisions du Conseil constitutionnel vectorisées,https://www.data.gouv.fr/datasets/constit-les-decisions-du-conseil-constitutionnel-vectorisees/,Direction interministérielle du numérique,2025-09-15,2025-07-24,702,92,0
+Données du Répertoire national des élus locaux  : Elus municipaux et communautaires de Fleury-sur-Orne,https://www.data.gouv.fr/datasets/donnees-du-repertoire-national-des-elus-locaux-elus-municipaux-et-communautaires-de-fleury-sur-orne/,Fleury-sur-Orne,2019-06-29,2019-06-29,699,1364,0
+Bornes incendie,https://www.data.gouv.fr/datasets/bornes-incendie/,Fleury-sur-Orne,2019-03-01,2019-03-01,697,3291,0
+Dotations de la commune - montants et critères,https://www.data.gouv.fr/datasets/dotations-de-la-commune-montants-et-criteres/,Fleury-sur-Orne,2020-11-10,2020-11-10,692,4597,0
+Lieux dits,https://www.data.gouv.fr/datasets/lieux-dits-1/,Fleury-sur-Orne,2025-09-14,2025-09-14,683,3995,0
+Vigicrues - Hauteurs et débits de l'Orne,https://www.data.gouv.fr/datasets/vigicrues-hauteurs-et-debits-de-lorne/,Fleury-sur-Orne,2018-06-16,2018-06-16,677,2464,0
+Historique des populations légales de 2008 à 2014,https://www.data.gouv.fr/datasets/historique-des-populations-legales-de-2008-a-2014/,Fleury-sur-Orne,2018-05-28,2018-05-28,673,1769,0
+Historique des établissements du domaine sanitaire et social,https://www.data.gouv.fr/datasets/historique-des-etablissements-du-domaine-sanitaire-et-social/,Fleury-sur-Orne,2024-08-10,2024-08-10,665,1286,0
+"Foyers allocataires à ""bas revenus"" (BC)",https://www.data.gouv.fr/datasets/foyers-allocataires-a-bas-revenus-bc/,Fleury-sur-Orne,2019-04-25,2019-04-25,662,2702,0
+Fréquentation de l'Espace Public Numérique (EPN),https://www.data.gouv.fr/datasets/frequentation-de-lespace-public-numerique-epn/,Fleury-sur-Orne,2022-07-18,2022-07-18,659,936,0
+Rapports annuels de la bibliothèque municipale Pauline Roland,https://www.data.gouv.fr/datasets/rapports-annuels-de-la-bibliotheque-municipale-pauline-roland/,Fleury-sur-Orne,2022-06-04,2022-06-04,651,1814,0
+Election présidentielle 2017 Résultats par bureaux de vote – Tour 1,https://www.data.gouv.fr/datasets/election-presidentielle-2017-resultats-par-bureaux-de-vote-tour-1-2/,Fleury-sur-Orne,2018-05-29,2018-05-29,645,1175,0
+Liste des personnes décédées à Fleury-sur-Orne depuis 1970,https://www.data.gouv.fr/datasets/liste-des-personnes-decedees-a-fleury-sur-orne-depuis-1970/,Fleury-sur-Orne,2020-09-24,2020-09-24,635,2681,0
+Structure de la population active par sexe et activité,https://www.data.gouv.fr/datasets/structure-de-la-population-active-par-sexe-et-activite/,Fleury-sur-Orne,2021-10-12,2021-10-12,634,1184,0
+Points de collecte des sapins de Noël,https://www.data.gouv.fr/datasets/points-de-collecte-des-sapins-de-noel/,Fleury-sur-Orne,2024-12-23,2024-12-23,633,996,0
+Base Permanente des Equipements (Ensemble) - Millésimé,https://www.data.gouv.fr/datasets/base-permanente-des-equipements-ensemble-millesime/,Fleury-sur-Orne,2021-01-17,2021-01-17,628,2538,0
+Répertoire des logements locatifs des bailleurs sociaux 2017,https://www.data.gouv.fr/datasets/repertoire-des-logements-locatifs-des-bailleurs-sociaux-2017/,Fleury-sur-Orne,2017-11-30,2017-11-30,615,2659,0
+Subdivisions fiscales,https://www.data.gouv.fr/datasets/subdivisions-fiscales-1/,Fleury-sur-Orne,2025-09-14,2025-09-14,615,2264,0
+Déploiement du haut et très haut débit - Immeuble,https://www.data.gouv.fr/datasets/deploiement-du-haut-et-tres-haut-debit-immeuble/,Fleury-sur-Orne,2021-06-06,2021-06-06,610,2140,0
+Comptes consolidés de la commune 2012-2019,https://www.data.gouv.fr/datasets/comptes-consolides-de-la-commune-2012-2019/,Fleury-sur-Orne,2020-11-10,2020-11-10,609,6275,0
+Points d'apport volontaire du verre,https://www.data.gouv.fr/datasets/points-dapport-volontaire-du-verre/,Fleury-sur-Orne,2018-06-01,2018-06-01,608,1379,0
+Subventions aux associations,https://www.data.gouv.fr/datasets/subventions-aux-associations-4/,Fleury-sur-Orne,2018-06-16,2018-06-16,607,6935,0
+Dénombrement et répartition des foyers allocataires selon l’âge du responsable de dossier (TA),https://www.data.gouv.fr/datasets/denombrement-et-repartition-des-foyers-allocataires-selon-lage-du-responsable-de-dossier-ta/,Fleury-sur-Orne,2019-04-25,2019-04-25,606,2294,0
+Terrains de pétanque,https://www.data.gouv.fr/datasets/terrains-de-petanque/,Fleury-sur-Orne,2019-03-01,2019-03-01,601,1924,0
+Comptes de la commune 2012-2019,https://www.data.gouv.fr/datasets/comptes-de-la-commune-2012-2019/,Fleury-sur-Orne,2020-11-10,2020-11-10,589,4900,0
+Limites communales,https://www.data.gouv.fr/datasets/limites-communales-5/,Fleury-sur-Orne,2025-09-14,2025-09-14,589,2761,0
+Les dernières actualités à Fleury-sur-Orne,https://www.data.gouv.fr/datasets/les-dernieres-actualites-a-fleury-sur-orne/,Fleury-sur-Orne,2025-09-20,2025-09-20,579,1373,0
+Sites web hébergés par la Ville,https://www.data.gouv.fr/datasets/sites-web-heberges-par-la-ville/,Fleury-sur-Orne,2018-05-29,2018-05-29,577,1093,0
+Contour Iris Millésimé,https://www.data.gouv.fr/datasets/contour-iris-millesime/,Fleury-sur-Orne,2020-10-11,2020-10-11,576,1771,0
+Hydrographie : Surfaces d'eau,https://www.data.gouv.fr/datasets/hydrographie-surfaces-deau/,Fleury-sur-Orne,2020-01-15,2020-01-15,575,2068,0
+Localisation des cimetières,https://www.data.gouv.fr/datasets/localisation-des-cimetieres/,Fleury-sur-Orne,2019-10-06,2019-10-06,573,1802,0
+Bureaux de vote,https://www.data.gouv.fr/datasets/bureaux-de-vote-25/,Fleury-sur-Orne,2019-05-14,2019-05-14,573,1297,0
+Déploiement du haut et très haut débit - Millésimé,https://www.data.gouv.fr/datasets/deploiement-du-haut-et-tres-haut-debit-millesime/,Fleury-sur-Orne,2021-10-28,2021-10-28,569,2740,0
+Résultats des élections présidentielles 2022 - 1er tour - par bureau de vote,https://www.data.gouv.fr/datasets/resultats-des-elections-presidentielles-2022-1er-tour-par-bureau-de-vote/,Fleury-sur-Orne,2022-04-14,2022-04-14,567,2116,0
+Comptes de la Collectivité,https://www.data.gouv.fr/datasets/comptes-de-la-collectivite/,Fleury-sur-Orne,2019-04-25,2019-04-25,565,3160,0
+Arrêts de transport en commun,https://www.data.gouv.fr/datasets/arrets-de-transport-en-commun/,Fleury-sur-Orne,2018-06-17,2018-06-17,558,3120,0
+Points d'accès Wifi Public,https://www.data.gouv.fr/datasets/points-dacces-wifi-public/,Fleury-sur-Orne,2020-06-18,2020-06-18,558,1838,0
+Sections,https://www.data.gouv.fr/datasets/sections/,Fleury-sur-Orne,2025-09-14,2025-09-14,554,1516,0
+Liste des boîtes aux lettres de rue avec heure limite de dépôt,https://www.data.gouv.fr/datasets/liste-des-boites-aux-lettres-de-rue-avec-heure-limite-de-depot/,Fleury-sur-Orne,2024-05-29,2024-05-29,550,3417,0
+Mobilités professionnelles en 2015 : déplacements domicile - lieu de travail,https://www.data.gouv.fr/datasets/mobilites-professionnelles-en-2015-deplacements-domicile-lieu-de-travail/,Fleury-sur-Orne,2019-10-05,2019-10-05,536,3587,0
+Elections municipales 2020 - Résultats du 1er tour,https://www.data.gouv.fr/datasets/elections-municipales-2020-resultats-du-1er-tour/,Fleury-sur-Orne,2020-06-29,2020-06-29,535,2638,0
+Tables de pique-nique,https://www.data.gouv.fr/datasets/tables-de-pique-nique/,Fleury-sur-Orne,2019-03-01,2019-03-01,532,1240,0
+Immeubles protégés au titre des Monuments Historiques,https://www.data.gouv.fr/datasets/immeubles-proteges-au-titre-des-monuments-historiques-4/,Fleury-sur-Orne,2025-06-23,2025-06-23,531,2484,0
+Prévisions Météo France,https://www.data.gouv.fr/datasets/previsions-meteo-france/,Fleury-sur-Orne,2019-10-05,2019-10-05,530,2149,0
+Hébergements,https://www.data.gouv.fr/datasets/hebergements/,Fleury-sur-Orne,2018-05-29,2018-05-29,527,2704,0
+Statistiques des visites du site web de la Ville,https://www.data.gouv.fr/datasets/statistiques-des-visites-du-site-web-de-la-ville/,Fleury-sur-Orne,2018-05-29,2018-05-29,522,1477,0
+Quartiers prioritaires de la politique de la ville (QPV),https://www.data.gouv.fr/datasets/quartiers-prioritaires-de-la-politique-de-la-ville-qpv-2/,Fleury-sur-Orne,2019-10-05,2019-10-05,522,1905,0
+Base adresse locale (BAL),https://www.data.gouv.fr/datasets/base-adresse-locale-bal-4/,Fleury-sur-Orne,2019-01-15,2019-01-15,520,1403,0
+Distributeurs de sacs pour les déjections canines,https://www.data.gouv.fr/datasets/distributeurs-de-sacs-pour-les-dejections-canines/,Fleury-sur-Orne,2019-03-01,2019-03-01,520,5051,0
+Statistiques garderie périscolaire,https://www.data.gouv.fr/datasets/statistiques-garderie-periscolaire/,Fleury-sur-Orne,2019-03-07,2019-03-07,513,1697,0
+Production électrique annuelle par filière,https://www.data.gouv.fr/datasets/production-electrique-annuelle-par-filiere/,Fleury-sur-Orne,2018-06-26,2018-06-26,511,2531,0
+Parcelles,https://www.data.gouv.fr/datasets/parcelles-6/,Fleury-sur-Orne,2025-09-14,2025-09-14,500,3734,0
+Résultats des élections présidentielles 2022 - 2nd tour - par bureau de vote,https://www.data.gouv.fr/datasets/resultats-des-elections-presidentielles-2022-2nd-tour-par-bureau-de-vote/,Fleury-sur-Orne,2022-04-28,2022-04-28,496,2966,0
+Salles à louer pour des événements,https://www.data.gouv.fr/datasets/salles-a-louer-pour-des-evenements-1/,Fleury-sur-Orne,2018-06-10,2018-06-10,492,2175,0
+Statistiques du compte Twitter de la Ville,https://www.data.gouv.fr/datasets/statistiques-du-compte-twitter-de-la-ville/,Fleury-sur-Orne,2018-06-01,2018-06-01,489,1179,0
+Dotation globale de fonctionnement,https://www.data.gouv.fr/datasets/dotation-globale-de-fonctionnement/,Fleury-sur-Orne,2019-06-29,2019-06-29,484,2605,0
+"Population par sexe, âge et nationalité (2014)",https://www.data.gouv.fr/datasets/population-par-sexe-age-et-nationalite-2014/,Fleury-sur-Orne,2018-05-28,2018-05-28,484,1424,0
+Election présidentielle 2017 Résultats par bureaux de vote – Tour 2,https://www.data.gouv.fr/datasets/election-presidentielle-2017-resultats-par-bureaux-de-vote-tour-2-1/,Fleury-sur-Orne,2018-05-29,2018-05-29,483,1527,0
+"Sites mobiles 2G, 3G, 4G",https://www.data.gouv.fr/datasets/sites-mobiles-2g-3g-4g/,Fleury-sur-Orne,2021-03-05,2021-03-05,483,961,0
+Etablissements d'enseignement du premier et second degrés,https://www.data.gouv.fr/datasets/etablissements-denseignement-du-premier-et-second-degres-1/,Fleury-sur-Orne,2021-01-18,2021-01-18,480,1381,0
+Balances comptables avec la présentation croisée nature-fonction 2017,https://www.data.gouv.fr/datasets/balances-comptables-avec-la-presentation-croisee-nature-fonction-2017/,Fleury-sur-Orne,2019-04-27,2019-04-27,480,2489,0
+Résultats élections européennes 2019,https://www.data.gouv.fr/datasets/resultats-elections-europeennes-2019-1/,Fleury-sur-Orne,2019-09-07,2019-09-07,476,1572,0
+Investissement Public Local,https://www.data.gouv.fr/datasets/investissement-public-local/,Fleury-sur-Orne,2019-04-25,2019-04-25,474,2040,0
+Poubelles,https://www.data.gouv.fr/datasets/poubelles-3/,Fleury-sur-Orne,2018-12-28,2018-12-28,473,1067,0
+Qualité de l'eau,https://www.data.gouv.fr/datasets/qualite-de-leau/,Fleury-sur-Orne,2018-06-17,2018-06-17,470,1608,0
+Catalogue des jeux de données de data.gouv.fr vectorisé,https://www.data.gouv.fr/datasets/catalogue-des-jeux-de-donnees-de-data-gouv-fr-vectorise/,Direction interministérielle du numérique,2025-09-15,2025-07-02,459,97,0
+Balances comptables avec la présentation croisée nature-fonction 2018,https://www.data.gouv.fr/datasets/balances-comptables-avec-la-presentation-croisee-nature-fonction-2018/,Fleury-sur-Orne,2019-12-22,2019-12-22,458,1445,0
+Feuilles,https://www.data.gouv.fr/datasets/feuilles/,Fleury-sur-Orne,2025-09-14,2025-09-14,457,3069,0
+Marchés publics,https://www.data.gouv.fr/datasets/marches-publics-10/,Fleury-sur-Orne,2018-06-16,2018-06-16,454,1420,0
+"Établissements labellisés ""génération 2024""",https://www.data.gouv.fr/datasets/etablissements-labellises-generation-2024-2/,Fleury-sur-Orne,2021-01-17,2021-01-17,446,1060,0
+Fréquentation de l'Espace Public Numérique (EPN) - Usagers uniques en accès libre de 2015 à 2018,https://www.data.gouv.fr/datasets/frequentation-de-lespace-public-numerique-epn-usagers-uniques-en-acces-libre-de-2015-a-2018/,Fleury-sur-Orne,2018-05-29,2018-05-29,443,1069,0
+Equipements sportifs,https://www.data.gouv.fr/datasets/equipements-sportifs-27/,Fleury-sur-Orne,2018-05-29,2018-05-29,443,2298,0
+Décès de 2009 à 2018,https://www.data.gouv.fr/datasets/deces-de-2009-a-2018/,Fleury-sur-Orne,2020-01-15,2020-01-15,437,1808,0
+Comptes-rendus du conseil municipal,https://www.data.gouv.fr/datasets/comptes-rendus-du-conseil-municipal/,Fleury-sur-Orne,2018-06-10,2018-06-10,429,2491,0
+Panneaux d'affichage libre,https://www.data.gouv.fr/datasets/panneaux-daffichage-libre-3/,Fleury-sur-Orne,2019-03-01,2019-03-01,429,2195,0
+Budget Ville de Bourges - 2025 - BP,https://www.data.gouv.fr/datasets/budget-ville-de-bourges-2025-bp/,Communauté d'Agglomération de Bourges,2025-09-12,2025-09-12,428,1,0
+Statistiques des publications du site web de la Ville,https://www.data.gouv.fr/datasets/statistiques-des-publications-du-site-web-de-la-ville/,Fleury-sur-Orne,2018-06-01,2018-06-01,427,1368,0
+Statistiques de la Fanpage Facebook de la Ville 1er trimestre 2018,https://www.data.gouv.fr/datasets/statistiques-de-la-fanpage-facebook-de-la-ville-1er-trimestre-2018/,Fleury-sur-Orne,2018-06-01,2018-06-01,426,1373,0
+Bancs publics,https://www.data.gouv.fr/datasets/bancs-publics-1/,Fleury-sur-Orne,2019-03-01,2019-03-01,424,2412,0
+Elections législatives des 11 et 18 juin 2017 - Résultats du 2nd tour,https://www.data.gouv.fr/datasets/elections-legislatives-des-11-et-18-juin-2017-resultats-du-2nd-tour-1/,Fleury-sur-Orne,2018-05-29,2018-05-29,423,1184,0
+Population : Données Carroyées à 200 mètres - 2010,https://www.data.gouv.fr/datasets/population-donnees-carroyees-a-200-metres-2010/,Fleury-sur-Orne,2019-04-25,2019-04-25,419,1750,0
+Achats de produits phytosanitaires estimés à l'échelle de la commune,https://www.data.gouv.fr/datasets/achats-de-produits-phytosanitaires-estimes-a-lechelle-de-la-commune/,Service des données et études statistiques (SDES),2025-08-13,2025-08-13,417,143,0
+Batiments,https://www.data.gouv.fr/datasets/batiments-8/,Fleury-sur-Orne,2025-09-14,2025-09-14,413,1625,0
+Rapports d'activité du centre socioculturel,https://www.data.gouv.fr/datasets/rapports-dactivite-du-centre-socioculturel/,Fleury-sur-Orne,2018-06-08,2018-06-08,407,1462,0
+Réseaux sociaux,https://www.data.gouv.fr/datasets/reseaux-sociaux/,Fleury-sur-Orne,2018-06-01,2018-06-01,405,1130,0
+Population couverte par au moins une prestation (NCT),https://www.data.gouv.fr/datasets/population-couverte-par-au-moins-une-prestation-nct/,Fleury-sur-Orne,2019-04-25,2019-04-25,405,1115,0
+Commerces ouverts de première nécessité pendant le confinement - Covid-19,https://www.data.gouv.fr/datasets/commerces-ouverts-de-premiere-necessite-pendant-le-confinement-covid-19/,Fleury-sur-Orne,2020-04-13,2020-04-13,403,990,0
+Recyclage de papiers,https://www.data.gouv.fr/datasets/recyclage-de-papiers/,Fleury-sur-Orne,2019-04-02,2019-04-02,403,1571,0
+"Population active de 15 ans ou plus ayant un emploi par sexe, lieu de travail et moyen de transport  - 2016",https://www.data.gouv.fr/datasets/population-active-de-15-ans-ou-plus-ayant-un-emploi-par-sexe-lieu-de-travail-et-moyen-de-transport-2016-1/,Fleury-sur-Orne,2019-06-29,2019-06-29,396,1017,0
+Statistiques restaurant scolaire,https://www.data.gouv.fr/datasets/statistiques-restaurant-scolaire/,Fleury-sur-Orne,2019-03-07,2019-03-07,395,1134,0
+Equipements municipaux,https://www.data.gouv.fr/datasets/equipements-municipaux/,Fleury-sur-Orne,2018-06-01,2018-06-01,386,3063,0
+Bulletins municipaux,https://www.data.gouv.fr/datasets/bulletins-municipaux/,Fleury-sur-Orne,2018-06-10,2018-06-10,384,1412,0
+Statistiques des visites du site web de l'Espace Public Numérique (EPN),https://www.data.gouv.fr/datasets/statistiques-des-visites-du-site-web-de-lespace-public-numerique-epn/,Fleury-sur-Orne,2018-06-01,2018-06-01,379,1755,0
+Parkings à vélo,https://www.data.gouv.fr/datasets/parkings-a-velo/,Fleury-sur-Orne,2025-09-14,2025-09-14,369,2862,0
+Elections législatives des 11 et 18 juin 2017 - Résultats du 1er tour,https://www.data.gouv.fr/datasets/elections-legislatives-des-11-et-18-juin-2017-resultats-du-1er-tour-1/,Fleury-sur-Orne,2018-05-29,2018-05-29,361,1167,0
+Coopérations internationales,https://www.data.gouv.fr/datasets/cooperations-internationales/,Fleury-sur-Orne,2018-07-12,2018-07-12,356,3046,0
+Bornes de recharge électrique,https://www.data.gouv.fr/datasets/bornes-de-recharge-electrique-3/,Fleury-sur-Orne,2018-06-17,2018-06-17,353,2555,0
+Organisation du temps scolaire,https://www.data.gouv.fr/datasets/organisation-du-temps-scolaire-2/,Fleury-sur-Orne,2021-01-17,2021-01-17,333,1070,0
+Professionnels de santé et de bien-être,https://www.data.gouv.fr/datasets/professionnels-de-sante-et-de-bien-etre/,Fleury-sur-Orne,2018-06-10,2018-06-10,318,1105,0
+Statistiques sur les inscriptions aux services périscolaires par âge et par sexe,https://www.data.gouv.fr/datasets/statistiques-sur-les-inscriptions-aux-services-periscolaires-par-age-et-par-sexe/,Fleury-sur-Orne,2019-03-07,2019-03-07,304,1521,0

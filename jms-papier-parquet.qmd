@@ -48,7 +48,7 @@ Plusieurs acteurs majeurs de l'écosystème de l'intelligence artificielle ont f
 Cet article vise à offrir un complément au retour d'expérience présenté lors des Journées de méthodologie statistique (JMS) 2025. Par rapport à celui-ci, cet article présentera plus extensivement les enjeux techniques qui expliquent la popularité de ce format bien qu'elles ne soient pas propres aux problématiques de diffusion de données (@sec-contexte). Cela permettra de justifier la manière dont ce choix technique rend possible de nombreuses exploitations. Nous reviendrons ensuite sur les enjeux liés à la diffusion de données publiques en `Parquet` et proposerons quelques bonnes pratiques pour leur mise à disposition et l'accompagnement des utilisateurs (@sec-retex). Enfin, nous évoquerons les perspectives qu'ouvre une adoption plus large de ce format pour la diffusion et le partage de données (@sec-perspectives).
 
 
-# Retour sur les proriétés techniques du format `Parquet` {#sec-contexte}
+# Retour sur les propriétés techniques du format `Parquet` {#sec-contexte}
 
 
 ## Les deux approches : le fichier ou la base de données

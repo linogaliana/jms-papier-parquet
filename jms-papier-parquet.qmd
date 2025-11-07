@@ -267,7 +267,9 @@ En `R`, il est possible d'écrire un code très proche quoiqu'un peu plus verbeu
 
 ```{=typst} 
 #titled-raw-block(filename: "Un exemple d'utilisation des données diffusées par l'Insee avec DuckDB et R", 
-  raw(lang: "Python", "url <- \"https://www.data.gouv.fr/api/1/datasets/r/fdf5b008-054b-4065-a819-3eb3313f8be7\"
+  raw(lang: "Python", "library(duckdb)
+
+url <- \"https://www.data.gouv.fr/api/1/datasets/r/fdf5b008-054b-4065-a819-3eb3313f8be7\"
 con <- DBI::dbConnect(duckdb::duckdb(), \":memory:\")
 query <- glue::glue(
   \"FROM read_parquet(\\\"{url}\\\") \",
@@ -289,7 +291,7 @@ url <- \"https://www.data.gouv.fr/api/1/datasets/r/fdf5b008-054b-4065-a819-3eb33
 con <- DBI::dbConnect(duckdb::duckdb(), \":memory:\")
 df <- tbl(con, glue::glue(\"read_parquet(\\\"{url}\\\")\"))
 df |>
-  filter(COMMUNE = '06088', AEMM > 2020) |>
+  filter(COMMUNE == '06088' && AEMM > '2020') |>
   tally() |>
   collect()
 ")

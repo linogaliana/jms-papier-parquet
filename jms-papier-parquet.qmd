@@ -238,7 +238,7 @@ Pour aider les utilisateurs à s'approprier ce format, un guide d'utilisation de
 [^reproductibilite]: Ce tableau est produit dans le cadre de la formation aux bonnes pratiques `R` et `Git` développée par l'Insee et faisant la promotion du format `Parquet` pour le stockage de données. Pour reproduire celui-ci, se rendre sur [inseefrlab.github.io/formation-bonnes-pratiques-git-R/slides/complete.html](https://inseefrlab.github.io/formation-bonnes-pratiques-git-R/). 
 
 
-Outre une utilisation efficace des ressources, la diffusion dans ce format appporte aussi du confort aux utilisateurs, notamment en montrant comment lire ces données avec `DuckDB`. Comme cette librairie est simple d'usage, le public cible de la diffusion de ces données, majoritairement utilisateur de `R` ou `Python`, pouvait ainsi s'approprier rapidement ce nouveau format. Pour illustrer cette simplicité d'usage, prenons pour exemple un besoin précis: dénombrer les logements niçois dont les occupants ont emmenagé depuis 2020. En `Python`, cela se traduit par la requête SQL:
+Outre une utilisation efficace des ressources, la diffusion dans ce format apporte aussi du confort aux utilisateurs, notamment en montrant comment lire ces données avec `DuckDB`. Comme cette librairie est simple d'usage, le public cible de la diffusion de ces données, majoritairement utilisateur de `R` ou `Python`, pouvait ainsi s'approprier rapidement ce nouveau format. Pour illustrer cette simplicité d'usage, prenons pour exemple un besoin précis: dénombrer les logements niçois dont les occupants ont emménagé depuis 2020. En `Python`, cela se traduit par la requête SQL:
 
 ```{=typst} 
 #titled-raw-block(filename: "Un exemple d'utilisation des données diffusées par l'Insee avec DuckDB et Python", 

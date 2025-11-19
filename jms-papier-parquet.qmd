@@ -5,6 +5,7 @@ authors:
     affiliation: Insee, Pôle Didoc
     email: <cedric.bobinec@insee.fr>
   - name: Lino Galiana
+    orcid: 0000-0001-8663-5100
     affiliation: Insee, Direction des statistiques démographiques et sociales
     email: <lino.galiana@insee.fr>
 keywords: # 6 maximum
